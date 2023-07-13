@@ -73,6 +73,8 @@ function Portfolio() {
   const years = portfolioData.map((yearGroup) => yearGroup.year);
   const { selectedYear, setYear, setYearWithoutScroll } = useYear(years);
 
+  document.title = "Portfolio - kkps.dev";
+
   return (
     <div className={styles.container}>
       <Header />

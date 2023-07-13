@@ -21,7 +21,8 @@ function ProjectDetails() {
 
   const project = findProject(currentYear, projectPath);
 
-  if (!project)
+  if (!project) {
+    document.title = "Project not found - kkps.dev";
     return (
       <Modal>
         <div className={styles.notFound}>
@@ -30,10 +31,11 @@ function ProjectDetails() {
         </div>
       </Modal>
     );
+  }
 
   const { cardTitle, fullDesc, galleryImgPaths, demoUrl, repoUrl, tags } =
     project;
-
+  document.title = `${cardTitle} - kkps.dev`;
   return (
     <Modal>
       <div className={styles.projectDetails}>

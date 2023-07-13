@@ -6,6 +6,8 @@ import styles from "./AboutMe.module.css";
 function AboutMe() {
   const navigate = useNavigate();
 
+  document.title = "About Me - kkps.dev";
+
   return (
     <div className={styles.container}>
       <img
