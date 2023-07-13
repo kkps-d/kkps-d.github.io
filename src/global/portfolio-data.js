@@ -163,7 +163,7 @@ export const portfolioData = [
           "/img/discord-bot/4.png",
         ],
         demoUrl: "",
-        repoUrl: "https://github.com/kkps-d/diedenieded-bot",
+        repoUrl: "https://github.com/kkps-d/dbot",
         tags: [],
       },
       // {
