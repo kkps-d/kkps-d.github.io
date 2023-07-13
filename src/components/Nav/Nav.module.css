@@ -1,0 +1,19 @@
+.nav {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  height: 75px;
+  padding: 0 20px;
+  flex-shrink: 0;
+}
+
+.nav a {
+  text-decoration: none;
+}
+
+.nav a:global(.active) > div {
+  -webkit-box-shadow: 0px 0px 0px 2px #ffffff;
+  box-shadow: 0px 0px 0px 2px #ffffff;
+  color: white;
+}
