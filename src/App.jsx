@@ -7,12 +7,13 @@ import {
 } from "react-router-dom";
 import AboutMe from "./views/AboutMe/AboutMe";
 import Portfolio from "./views/Portfolio/Portfolio";
-import Modal from "./views/Modal/Modal";
 import Nav from "./components/Nav/Nav";
 import Footer from "./components/Footer/Footer";
 import PdfModal from "./components/PdfModal/PdfModal";
 import Pdf from "./Kaung's Master Resume.pdf";
 import ProjectDetails from "./views/Portfolio/Components/ProjectDetails/ProjectDetails";
+
+import "../404.html";
 
 function App() {
   return (
