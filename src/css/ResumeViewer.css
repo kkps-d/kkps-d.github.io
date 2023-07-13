@@ -1,0 +1,13 @@
+.pdf-viewer {
+  width: 55%;
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.pdf-viewer > object {
+  width: 100%;
+  height: 100%;
+}

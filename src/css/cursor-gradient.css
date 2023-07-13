@@ -1,0 +1,41 @@
+.mouse-cursor-gradient-tracking {
+  position: relative;
+  overflow: hidden;
+}
+
+/* .mouse-cursor-gradient-tracking span {
+    position: relative;
+  } */
+
+.mouse-cursor-gradient-tracking:before {
+  --size: 0;
+  content: "";
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: var(--size);
+  height: var(--size);
+  background: radial-gradient(
+    circle closest-side,
+    rgba(255, 255, 255, 0.5),
+    transparent
+  );
+  transform: translate(-50%, -50%);
+  transition: width 0.2s ease, height 0.2s ease;
+}
+
+.mouse-cursor-gradient-tracking:hover:before {
+  --size: 200px;
+}
+
+.mouse-cursor-gradient-tracking.project-card:before {
+  background: radial-gradient(
+    circle closest-side,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+}
+
+.mouse-cursor-gradient-tracking.project-card:hover:before {
+  --size: 500px;
+}

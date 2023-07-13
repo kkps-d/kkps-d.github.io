@@ -1,0 +1,9 @@
+.date-select-option {
+  cursor: pointer;
+}
+
+.date-select-option.selected {
+  scale: 1.05;
+  transform-origin: right;
+  transition: 100ms;
+}

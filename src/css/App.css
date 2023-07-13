@@ -1,0 +1,50 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+* {
+  font-family: "Geologica", sans-serif;
+  color: white;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.container.bg-image {
+  background: rgba(0, 0, 0, 0.7) url("~/public/bg.jpg") no-repeat center center
+    fixed;
+  background-size: cover;
+  background-blend-mode: darken;
+}
+
+.container.bg-gradient {
+  background: radial-gradient(
+    at bottom,
+    rgba(50, 50, 50, 1),
+    rgba(56, 56, 56, 0.31),
+    rgba(17, 17, 17, 0)
+  );
+}
+
+#root {
+  height: 100%;
+}
+
+.content {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.lighter-text {
+  opacity: 0.6;
+}
