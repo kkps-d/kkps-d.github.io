@@ -34,7 +34,7 @@ export const portfolioData = [
           "Website written in React to inform you about myself and showcase my projects",
         cardImgPath: "/img/personal-website/card.png",
         fullDesc: [
-          "This website is built with React usinng create-react-app. It serves as a personal website to inform you more about myself and as a showcase to my other projects, but it was also a good way to put my React skills into practice.",
+          "This website is built with React usinng create-react-app. It serves as a personal website to inform you more about myself and as a showcase to my other projects, but it was also a good way to put my React skills into practice. The website is then later ported to Vite.js and React Router was added to make the page into a single-page app.",
           "The website is mostly complete, but there are still a few quirks with the image viewer, and proper mobile support has yet to be added. Feel free to contact me if you have any feedback!",
         ],
         galleryImgPaths: ["/img/personal-website/picture1.png"],
