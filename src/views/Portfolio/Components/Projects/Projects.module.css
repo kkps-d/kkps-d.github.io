@@ -1,0 +1,14 @@
+.projects {
+  /* background-color: silver; */
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
+  width: 1000px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  gap: 20px;
+}
+
+.projects::-webkit-scrollbar {
+  display: none;
+}

@@ -1,0 +1,14 @@
+footer {
+  display: flex;
+  flex-direction: row;
+  padding: 8px;
+  flex-shrink: 0;
+}
+
+footer > * {
+  flex-grow: 1;
+}
+
+footer > *:nth-child(2) {
+  text-align: right;
+}
