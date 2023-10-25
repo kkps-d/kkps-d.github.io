@@ -14,6 +14,7 @@ import Pdf from "./Kaung's Master Resume.pdf";
 import ProjectDetails from "./views/Portfolio/Components/ProjectDetails/ProjectDetails";
 
 import "../404.html";
+import FourOFour from "./views/FourOFour/FourOFour";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           path="portfolio/:currentYear/:projectPath"
           element={<ProjectDetails />}
         />
+        <Route path="*" element={<FourOFour />} />
       </Routes>
       <Footer />
     </BrowserRouter>

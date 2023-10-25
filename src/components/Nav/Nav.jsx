@@ -5,7 +5,8 @@ import { NavLink, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import Logo from "../Logo/Logo";
 
-function Nav() {
+function Nav({ hideLogo }) {
+  console.log(hideLogo);
   const { pathname } = useLocation();
   useEffect(() => {
     // Update the background image according to current pathname
@@ -19,7 +20,7 @@ function Nav() {
 
   return (
     <nav className={styles.nav}>
-      {pathname !== "/about" ? <Logo /> : null}
+      {pathname !== "/about" ? hideLogo || <Logo /> : null}
       <FlexSpacer />
       <NavLink to="/about">
         <Button>About Me</Button>
