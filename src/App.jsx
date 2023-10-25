@@ -1,10 +1,4 @@
-import {
-  BrowserRouter,
-  Navigate,
-  Route,
-  Routes,
-  useLocation,
-} from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import AboutMe from "./views/AboutMe/AboutMe";
 import Portfolio from "./views/Portfolio/Portfolio";
 import Nav from "./components/Nav/Nav";
@@ -13,7 +7,7 @@ import PdfModal from "./components/PdfModal/PdfModal";
 import Pdf from "./Kaung's Master Resume.pdf";
 import ProjectDetails from "./views/Portfolio/Components/ProjectDetails/ProjectDetails";
 
-import "../404.html";
+// import "../404.html";
 import FourOFour from "./views/FourOFour/FourOFour";
 
 function App() {
