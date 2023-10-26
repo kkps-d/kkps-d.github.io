@@ -14,6 +14,14 @@
   overflow: hidden;
 }
 
+.tagContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 3px;
+  flex-wrap: wrap;
+  margin: 5px 0;
+}
+
 :global(.cursor-gradient).projectCard:before {
   background: radial-gradient(
     circle closest-side,
@@ -45,6 +53,20 @@
   background-color: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(5px);
   pointer-events: none;
+}
+
+.projectCardBody > p {
+  overflow: hidden;
+}
+
+.projectCardBody > p {
+  max-height: 150px;
+  transition: 200ms;
+}
+
+.projectCardBody:global(.hidden) > p {
+  max-height: 0px;
+  transition: 200ms;
 }
 
 .projectCard {

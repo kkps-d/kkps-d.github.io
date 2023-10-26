@@ -6,6 +6,8 @@ import Button from "../../../../components/Button/Button";
 import HorizontalDivider from "../../../../components/HorizontalDivider/HorizontalDivider";
 import ImageGallery from "./ImageGallery";
 import { useState } from "react";
+import { tags } from "../../../../global/tags";
+import ProjectTag from "../Projects/ProjectTag";
 
 function findProject(targetYear, urlPath) {
   return portfolioData
@@ -33,7 +35,7 @@ function ProjectDetails() {
     );
   }
 
-  const { cardTitle, fullDesc, galleryImgPaths, demoUrl, repoUrl, tags } =
+  const { cardTitle, fullDesc, galleryImgPaths, demoUrl, repoUrl, tagIndexes } =
     project;
   document.title = `${cardTitle} - kkps.dev`;
   return (
@@ -51,6 +53,11 @@ function ProjectDetails() {
         >
           <h1>{cardTitle}</h1>
           <h4 className="lighter-text">{currentYear}</h4>
+          <div className={styles.tagContainer}>
+            {tagIndexes.map((tag) => (
+              <ProjectTag key={tag} tag={tags[tag]} />
+            ))}
+          </div>
           <HorizontalDivider width="100px" />
           <div className={styles.description}>
             {fullDesc.map((desc) => (

@@ -1,29 +1,25 @@
 // Contains the data to render the portfolio page
 export const portfolioData = [
-  // {
-  //   year: "ongoing",
-  //   projects: [
-  //     {
-  //       cardTitle: "services",
-  //       cardDesc:
-  //         "all the services hosted from my homelab. you may need to request permission to access some of them.",
-  //       cardImgPath:
-  //         "https://p1.pxfuel.com/preview/653/702/399/rose-flower-flowers-red-rose-royalty-free-thumbnail.jpg",
-  //       fullDesc: [
-  //         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fames ac turpis egestas sed tempus urna et pharetra pharetra. Interdum consectetur libero id faucibus nisl tincidunt eget. Diam in arcu cursus euismod quis viverra nibh.",
-  //         "Leo integer malesuada nunc vel risus commodo viverra maecenas accumsan. Aliquet nec ullamcorper sit amet risus nullam. Interdum velit euismod in pellentesque massa placerat duis. Posuere lorem ipsum dolor sit amet. Suspendisse in est ante in nibh mauris. Odio ut sem nulla pharetra. Lacus vel facilisis volutpat est velit. Id volutpat lacus laoreet non curabitur gravida. Condimentum id venenatis a condimentum vitae sapien pellentesque habitant morbi. ",
-  //       ],
-  //       galleryImgPaths: [
-  //         "https://images.pexels.com/photos/1400249/pexels-photo-1400249.jpeg?cs=srgb&dl=pexels-mihai-vlasceanu-1400249.jpg&fm=jpg",
-  //         "https://cdn.britannica.com/84/73184-050-05ED59CB/Sunflower-field-Fargo-North-Dakota.jpg",
-  //         "https://p1.pxfuel.com/preview/653/702/399/rose-flower-flowers-red-rose-royalty-free-thumbnail.jpg",
-  //       ],
-  //       demoUrl: "https://demo.com",
-  //       repoUrl: "",
-  //       tags: [],
-  //     },
-  //   ],
-  // },
+  {
+    year: "ongoing",
+    projects: [
+      {
+        urlPath: "button-board-helper",
+        cardTitle: "Button Board Windows Helper",
+        cardDesc:
+          "Helper program that helps interface with Windows APIs, currently for controlling audio endpoints. Web UI for testing the program is included.",
+        cardImgPath: "/img/button-board-helper/card.png",
+        fullDesc: [
+          "This is a helper program for Button Board (work in progress) that allows it to access Windows APIs by sending messages via TCP. This program is currently mainly used to get audio endpoints and audio session information and control them via the CoreAudio library (morphx666/CoreAudio, thanks!), but more features should be added soon.",
+          "The repository also includes a web dashboard and server that is used to test all the functionality of the helper program.",
+        ],
+        galleryImgPaths: ["/img/button-board-helper/recording.mp4"],
+        demoUrl: "",
+        repoUrl: "https://github.com/kkps-d/button-board-win32-helper/",
+        tagIndexes: [1, 3, 4, 5, 7],
+      },
+    ],
+  },
   {
     year: "2023",
     projects: [
@@ -34,13 +30,13 @@ export const portfolioData = [
           "Website written in React to inform you about myself and showcase my projects",
         cardImgPath: "/img/personal-website/card.png",
         fullDesc: [
-          "This website is built with React usinng create-react-app. It serves as a personal website to inform you more about myself and as a showcase to my other projects, but it was also a good way to put my React skills into practice. The website is then later ported to Vite.js and React Router was added to make the page into a single-page app.",
+          "This website is built with React using create-react-app. It serves as a personal website to inform you more about myself and as a showcase to my other projects, but it was also a good way to put my React skills into practice. The website is then later ported to Vite.js and React Router was added to make the page into a single-page app.",
           "The website is mostly complete, but there are still a few quirks with the image viewer, and proper mobile support has yet to be added. Feel free to contact me if you have any feedback!",
         ],
         galleryImgPaths: ["/img/personal-website/picture1.png"],
         demoUrl: "",
         repoUrl: "https://github.com/kkps-d/kkps-d.github.io",
-        tags: [],
+        tagIndexes: [3, 4, 5, 6],
       },
       {
         urlPath: "gradiotronics",
@@ -63,7 +59,7 @@ export const portfolioData = [
         ],
         demoUrl: "https://www.kkps.dev/gradiotronics/",
         repoUrl: "https://github.com/kkps-d/gradiotronics",
-        tags: [],
+        tagIndexes: [0, 3, 4, 5, 11],
       },
       {
         urlPath: "typing-game",
@@ -83,13 +79,13 @@ export const portfolioData = [
         demoUrl: "https://replit.com/@kkps-d/typing-tester",
         repoUrl:
           "https://github.com/kkps-d/uop-classwork-repository/tree/main/comp-129-software-engineering/typing-tester",
-        tags: [],
+        tagIndexes: [2, 8, 9],
       },
       {
         urlPath: "time-app",
         cardTitle: "Time Management App",
         cardDesc:
-          "interactive figma prototype of a time management app created for human-computer interface class",
+          "Interactive figma prototype of a time management app created for human-computer interface class",
         cardImgPath: "/img/time-app/card.png",
         fullDesc: [
           "This is an interactive Figma prototype of a time management app that our team developed for Human-Computer Interface class. The app was the product of a semester long research-and-developement cycle.",
@@ -105,7 +101,7 @@ export const portfolioData = [
         demoUrl:
           "https://www.figma.com/proto/2u5BolbjmlhcVWZAukkZev/Final-prototype?page-id=0%3A1&type=design&node-id=231-2&viewport=1701%2C-354%2C0.22&t=up6zbOScm7vhVc5Z-1&scaling=scale-down&starting-point-node-id=231%3A2&show-proto-sidebar=1&mode=design",
         repoUrl: "",
-        tags: [],
+        tagIndexes: [12],
       },
     ],
   },
@@ -125,7 +121,7 @@ export const portfolioData = [
         demoUrl: "https://replit.com/@kkps-d/expression-evaluator#Readme.md",
         repoUrl:
           "https://github.com/kkps-d/uop-classwork-repository/tree/main/comp-141-programming-languages",
-        tags: [],
+        tagIndexes: [2],
       },
       {
         urlPath: "pair-finder",
@@ -139,7 +135,7 @@ export const portfolioData = [
         galleryImgPaths: ["/img/pair-finder/1.png"],
         demoUrl: "https://www.kkps.dev/closest-pair-finder/",
         repoUrl: "https://github.com/kkps-d/closest-pair-finder",
-        tags: [],
+        tagIndexes: [3, 4, 5],
       },
     ],
   },
@@ -164,7 +160,7 @@ export const portfolioData = [
         ],
         demoUrl: "",
         repoUrl: "https://github.com/kkps-d/dbot",
-        tags: [],
+        tagIndexes: [3, 4, 5, 7],
       },
       // {
       //   cardTitle: "sudoku",
@@ -176,7 +172,7 @@ export const portfolioData = [
       //   galleryImgPaths: ["1.png", "2.png"],
       //   demoUrl: "https://demo.com",
       //   repoUrl: "",
-      //   tags: [],
+      //   tagIndexes: [],
       // },
       {
         urlPath: "hangman",
@@ -191,7 +187,7 @@ export const portfolioData = [
         demoUrl: "https://replit.com/@kkps-d/hangman",
         repoUrl:
           "https://github.com/kkps-d/uop-classwork-repository/tree/main/ecpe-170-computer-systems-and-networking/lab12",
-        tags: [],
+        tagIndexes: [10],
       },
     ],
   },
@@ -214,7 +210,7 @@ export const portfolioData = [
         ],
         demoUrl: "",
         repoUrl: "https://github.com/kkps-d/Home32-Server",
-        tags: [],
+        tagIndexes: [0, 3, 4, 5, 7, 11],
       },
       // {
       //   cardTitle: "Mario-like game",
@@ -227,7 +223,7 @@ export const portfolioData = [
       //   demoUrl: "https://demo.com",
       //   repoUrl:
       //     "https://github.com/kkps-d/uop-classwork-repository/tree/main/comp-55-application-development/groupproject-team-5-mario-clone",
-      //   tags: [],
+      //   tagIndexes: [],
       // },
     ],
   },
@@ -246,7 +242,7 @@ export const portfolioData = [
         galleryImgPaths: ["/img/gallery/1.png", "/img/gallery/2.png"],
         demoUrl: "https://kkps.dev/engr-gp-8/",
         repoUrl: "https://github.com/kkps-d/engr-gp-8",
-        tags: [],
+        tagIndexes: [3, 4, 5],
       },
     ],
   },

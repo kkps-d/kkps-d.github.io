@@ -5,6 +5,14 @@
   overflow: hidden;
 }
 
+.tagContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 3px;
+  flex-wrap: wrap;
+  margin: 5px 0;
+}
+
 @media screen and (max-width: 1281px) {
   .projectDetails {
     width: 900px;

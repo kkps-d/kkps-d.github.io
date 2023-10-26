@@ -6,7 +6,6 @@ import { useEffect } from "react";
 import Logo from "../Logo/Logo";
 
 function Nav({ hideLogo }) {
-  console.log(hideLogo);
   const { pathname } = useLocation();
   useEffect(() => {
     // Update the background image according to current pathname
