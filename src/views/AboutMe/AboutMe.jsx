@@ -31,12 +31,8 @@ function AboutMe() {
         </p>
 
         <p>
-          When I'm not working on something, I like to listen to music,
-          especially EDM, with some of my favorite artists are KSHMR and W&W. I
-          also enjoy spending time playing games either competitive like Apex
-          Legends and DOTA 2 with my friends, or story-driven games, a few
-          favorites being Skyrim and The Witcher 3. I also like to take long
-          strolls, being lost in my own thoughts.
+          If you're interested in talking to me, reach out via email or LinkedIn. Links below!
+          I'm looking forward to it!
         </p>
 
         <p className="lighter-text">
