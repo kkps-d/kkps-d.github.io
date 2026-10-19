@@ -1,13 +1,14 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
-import "./global/colors.css";
-import "./global/cursor-gradient.css";
-import "./global/root-style.css";
-import "./global/text-styles.css";
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import { Router } from 'wouter'
+import { useHashLocation } from 'wouter/use-hash-location'
+import App from './App.jsx'
+import './index.css'
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <Router hook={useHashLocation}>
+      <App />
+    </Router>
+  </StrictMode>,
+)

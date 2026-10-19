@@ -1,34 +1,42 @@
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
-import AboutMe from "./views/AboutMe/AboutMe";
-import Portfolio from "./views/Portfolio/Portfolio";
-import Nav from "./components/Nav/Nav";
-import Footer from "./components/Footer/Footer";
-import PdfModal from "./components/PdfModal/PdfModal";
-import Pdf from "./Kaung's Master Resume.pdf";
-import ProjectDetails from "./views/Portfolio/Components/ProjectDetails/ProjectDetails";
+import { useState } from 'react'
+import { Link, Route, Switch } from 'wouter'
 
-// import "../404.html";
-import FourOFour from "./views/FourOFour/FourOFour";
+function Home() {
+  const [count, setCount] = useState(0)
 
-function App() {
   return (
-    <BrowserRouter>
-      <Nav />
-      <Routes>
-        <Route index element={<Navigate to="about" />} />
-        <Route path="about" element={<AboutMe />} />
-        <Route path="about/resume" element={<PdfModal pdfPath={Pdf} />} />
-        <Route path="portfolio" element={<Portfolio />} />
-        <Route path="portfolio/:currentYear" element={<Portfolio />} />
-        <Route
-          path="portfolio/:currentYear/:projectPath"
-          element={<ProjectDetails />}
-        />
-        <Route path="*" element={<FourOFour />} />
-      </Routes>
-      <Footer />
-    </BrowserRouter>
-  );
+    <>
+      <h1>Vite + React</h1>
+      <p>A fresh start, with wouter for routing.</p>
+      <button onClick={() => setCount((value) => value + 1)}>
+        Count is {count}
+      </button>
+      <p className="hint">Edit src/App.jsx to get started.</p>
+    </>
+  )
 }
 
-export default App;
+export default function App() {
+  return (
+    <div className="app">
+      <nav aria-label="Main navigation">
+        <Link href="/">Home</Link>
+        <Link href="/about">About</Link>
+      </nav>
+      <main>
+        <Switch>
+          <Route path="/" component={Home} />
+          <Route path="/about">
+            <h1>About</h1>
+            <p>Built with React, Vite, wouter, and plain CSS.</p>
+            <Link href="/">Back home</Link>
+          </Route>
+          <Route>
+            <h1>Page not found</h1>
+            <Link href="/">Back home</Link>
+          </Route>
+        </Switch>
+      </main>
+    </div>
+  )
+}
