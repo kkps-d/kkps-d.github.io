@@ -1,6 +1,6 @@
-# React + Vite
+# React + TypeScript + Vite
 
-A minimal React app using wouter for routing and plain CSS for styling.
+A minimal React TypeScript app using wouter for routing and plain CSS for styling.
 
 ## Development
 
@@ -15,6 +15,8 @@ npm run dev
 npm run build
 npm run preview
 ```
+
+`npm run build` checks TypeScript before bundling. Run `npm run typecheck` to check types without building. App source lives in `src/App.tsx`, with the entry point in `src/main.tsx`.
 
 The app uses hash routes (`/#/` and `/#/about`) so navigation and refreshes work on static hosting without server rewrites. Unknown routes display a not-found page.
 

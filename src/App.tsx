@@ -6,12 +6,12 @@ function Home() {
 
   return (
     <>
-      <h1>Vite + React</h1>
+      <h1>Vite + React + TypeScript</h1>
       <p>A fresh start, with wouter for routing.</p>
       <button onClick={() => setCount((value) => value + 1)}>
         Count is {count}
       </button>
-      <p className="hint">Edit src/App.jsx to get started.</p>
+      <p className="hint">Edit src/App.tsx to get started.</p>
     </>
   )
 }
@@ -28,7 +28,7 @@ export default function App() {
           <Route path="/" component={Home} />
           <Route path="/about">
             <h1>About</h1>
-            <p>Built with React, Vite, wouter, and plain CSS.</p>
+            <p>Built with React, TypeScript, Vite, wouter, and plain CSS.</p>
             <Link href="/">Back home</Link>
           </Route>
           <Route>
