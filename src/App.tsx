@@ -1,42 +1,19 @@
-import { useState } from 'react'
 import { Link, Route, Switch } from 'wouter'
+import { Home } from './pages/Home'
 
-function Home() {
-  const [count, setCount] = useState(0)
-
+function Routes() {
   return (
-    <>
-      <h1>Vite + React + TypeScript</h1>
-      <p>A fresh start, with wouter for routing.</p>
-      <button onClick={() => setCount((value) => value + 1)}>
-        Count is {count}
-      </button>
-      <p className="hint">Edit src/App.tsx to get started.</p>
-    </>
+    <Switch>
+      <Route path="/" component={Home} />
+      <Route path="/about">asdf</Route>
+      <Route>
+        <h1>Page not found</h1>
+        <Link href="/">Back home</Link>
+      </Route>
+    </Switch>
   )
 }
 
 export default function App() {
-  return (
-    <div className="app">
-      <nav aria-label="Main navigation">
-        <Link href="/">Home</Link>
-        <Link href="/about">About</Link>
-      </nav>
-      <main>
-        <Switch>
-          <Route path="/" component={Home} />
-          <Route path="/about">
-            <h1>About</h1>
-            <p>Built with React, TypeScript, Vite, wouter, and plain CSS.</p>
-            <Link href="/">Back home</Link>
-          </Route>
-          <Route>
-            <h1>Page not found</h1>
-            <Link href="/">Back home</Link>
-          </Route>
-        </Switch>
-      </main>
-    </div>
-  )
+  return <Routes />
 }
