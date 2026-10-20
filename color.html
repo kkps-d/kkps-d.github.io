@@ -6,28 +6,75 @@
     <title>Color playground</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link id="font-stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet" />
+    <link
+      id="font-stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
     <style>
-      * { box-sizing: border-box; }
+      * {
+        box-sizing: border-box;
+      }
       body {
         margin: 0;
         min-height: 100vh;
         padding: 10px;
         background: #dbeafe;
         color: #172033;
-        font: 11px ui-monospace, monospace;
+        font:
+          11px ui-monospace,
+          monospace;
       }
-      .controls { position: absolute; top: 10px; z-index: 1; }
-      .background-controls { left: 10px; }
-      .text-controls { right: 10px; }
-      main { min-height: calc(100svh - 20px); display: grid; place-items: center; padding: 100px 14px; }
-      .sample { max-width: 600px; text-align: center; color: #172033; font-family: var(--body-font, Bierstadt), sans-serif; }
-      h1, h2 { font-family: var(--heading-font, 'Playfair Display'), serif; }
-      h1 { margin: 0 0 16px; font-size: clamp(32px, 6vw, 56px); font-weight: 600; line-height: 1.1; }
-      h2 { margin: 0 0 20px; font-size: clamp(18px, 3vw, 24px); font-weight: 500; line-height: 1.4; }
-      p { margin: 0; font-size: 16px; line-height: 1.7; }
-      .picker { display: flex; align-items: center; gap: 6px; }
-      input[type="color"] {
+      .controls {
+        position: absolute;
+        top: 10px;
+        z-index: 1;
+      }
+      .background-controls {
+        left: 10px;
+      }
+      .text-controls {
+        right: 10px;
+      }
+      main {
+        min-height: calc(100svh - 20px);
+        display: grid;
+        place-items: center;
+        padding: 100px 14px;
+      }
+      .sample {
+        max-width: 600px;
+        text-align: center;
+        color: #172033;
+        font-family: var(--body-font, Bierstadt), sans-serif;
+      }
+      h1,
+      h2 {
+        font-family: var(--heading-font, 'Playfair Display'), serif;
+      }
+      h1 {
+        margin: 0 0 16px;
+        font-size: clamp(32px, 6vw, 56px);
+        font-weight: 600;
+        line-height: 1.1;
+      }
+      h2 {
+        margin: 0 0 20px;
+        font-size: clamp(18px, 3vw, 24px);
+        font-weight: 500;
+        line-height: 1.4;
+      }
+      p {
+        margin: 0;
+        font-size: 16px;
+        line-height: 1.7;
+      }
+      .picker {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      input[type='color'] {
         width: 28px;
         height: 24px;
         padding: 0;
@@ -35,7 +82,7 @@
         background: transparent;
         cursor: pointer;
       }
-      input[type="text"] {
+      input[type='text'] {
         width: 9ch;
         padding: 2px;
         border: 0;
@@ -45,7 +92,9 @@
         color: inherit;
         font: inherit;
       }
-      input[aria-invalid="true"] { outline: 1px solid currentColor; }
+      input[aria-invalid='true'] {
+        outline: 1px solid currentColor;
+      }
       select {
         display: block;
         width: 190px;
@@ -59,10 +108,26 @@
         color: inherit;
         font: inherit;
       }
-      option, optgroup { background: white; color: #172033; }
-      ol { margin: 6px 0 0; padding: 0; list-style: none; max-height: min(300px, 70vh); overflow-y: auto; }
-      li + li { margin-top: 2px; }
-      li { display: flex; align-items: center; gap: 6px; }
+      option,
+      optgroup {
+        background: white;
+        color: #172033;
+      }
+      ol {
+        margin: 6px 0 0;
+        padding: 0;
+        list-style: none;
+        max-height: min(300px, 70vh);
+        overflow-y: auto;
+      }
+      li + li {
+        margin-top: 2px;
+      }
+      li {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
       button {
         display: flex;
         align-items: center;
@@ -76,216 +141,309 @@
         font: inherit;
         cursor: pointer;
       }
-      button:hover { text-decoration: underline; }
-      .remove { width: auto; padding: 3px; font-size: 13px; }
-      :focus-visible { outline: 1px solid currentColor; outline-offset: 2px; }
-      .swatch { width: 14px; height: 14px; border: 1px solid #80808080; flex-shrink: 0; }
+      button:hover {
+        text-decoration: underline;
+      }
+      .remove {
+        width: auto;
+        padding: 3px;
+        font-size: 13px;
+      }
+      :focus-visible {
+        outline: 1px solid currentColor;
+        outline-offset: 2px;
+      }
+      .swatch {
+        width: 14px;
+        height: 14px;
+        border: 1px solid #80808080;
+        flex-shrink: 0;
+      }
     </style>
   </head>
   <body>
-    <section class="controls background-controls" aria-label="Background color controls">
+    <section
+      class="controls background-controls"
+      aria-label="Background color controls"
+    >
       <div class="picker">
-        <input type="color" id="color" value="#dbeafe" aria-label="Background color" />
-        <input type="text" id="current" value="#DBEAFE" aria-label="Background hex color" spellcheck="false" autocomplete="off" maxlength="7" />
+        <input
+          type="color"
+          id="color"
+          value="#dbeafe"
+          aria-label="Background color"
+        />
+        <input
+          type="text"
+          id="current"
+          value="#DBEAFE"
+          aria-label="Background hex color"
+          spellcheck="false"
+          autocomplete="off"
+          maxlength="7"
+        />
       </div>
       <ol id="history" aria-label="Previously applied colors"></ol>
     </section>
     <section class="controls text-controls" aria-label="Text color controls">
       <div class="picker">
-        <input type="color" id="text-color" value="#172033" aria-label="Text color" />
-        <input type="text" id="text-current" value="#172033" aria-label="Text hex color" spellcheck="false" autocomplete="off" maxlength="7" />
+        <input
+          type="color"
+          id="text-color"
+          value="#172033"
+          aria-label="Text color"
+        />
+        <input
+          type="text"
+          id="text-current"
+          value="#172033"
+          aria-label="Text hex color"
+          spellcheck="false"
+          autocomplete="off"
+          maxlength="7"
+        />
       </div>
-      <select id="font-pair" aria-label="Heading and body font combination"></select>
+      <select
+        id="font-pair"
+        aria-label="Heading and body font combination"
+      ></select>
       <ol id="text-history" aria-label="Previously applied text colors"></ol>
     </section>
     <main>
       <div class="sample" id="sample">
         <h1>A little color changes everything.</h1>
         <h2>Find a combination that feels right.</h2>
-        <p>This is a space to explore color. Try a soft background with bold text, or something bright and unexpected. See how each shade changes the way these words look and feel.</p>
+        <p>
+          This is a space to explore color. Try a soft background with bold
+          text, or something bright and unexpected. See how each shade changes
+          the way these words look and feel.
+        </p>
       </div>
     </main>
     <script>
-      const fontSelect = document.getElementById('font-pair');
-      const fontPairs = new Map();
-      const fontStorageKey = 'color-playground:font-pair';
+      const fontSelect = document.getElementById('font-pair')
+      const fontPairs = new Map()
+      const fontStorageKey = 'color-playground:font-pair'
 
       function addFontPair(parent, heading, body) {
-        const option = document.createElement('option');
-        option.value = `${heading}|${body}`;
-        option.textContent = `${heading} / ${body}`;
-        parent.append(option);
-        fontPairs.set(option.value, { heading, body });
+        const option = document.createElement('option')
+        option.value = `${heading}|${body}`
+        option.textContent = `${heading} / ${body}`
+        parent.append(option)
+        fontPairs.set(option.value, { heading, body })
       }
 
-      addFontPair(fontSelect, 'Playfair Display', 'Bierstadt');
-      addFontPair(fontSelect, 'Playfair Display', 'Inter');
+      addFontPair(fontSelect, 'Playfair Display', 'Bierstadt')
+      addFontPair(fontSelect, 'Playfair Display', 'Inter')
       const fontGroups = [
-        ['Serif / Sans-serif', ['Lora', 'Playfair Display'], ['Inter', 'Plus Jakarta Sans']],
-        ['Sans-serif / Serif', ['Work Sans', 'Outfit'], ['Merriweather', 'Source Serif 4']],
-        ['Sans-serif / Sans-serif', ['Plus Jakarta Sans', 'Space Grotesk'], ['Inter', 'DM Sans']],
-        ['Serif / Serif', ['Cormorant Garamond', 'Cinzel'], ['Lora', 'EB Garamond']],
-      ];
+        [
+          'Serif / Sans-serif',
+          ['Lora', 'Playfair Display'],
+          ['Inter', 'Plus Jakarta Sans'],
+        ],
+        [
+          'Sans-serif / Serif',
+          ['Work Sans', 'Outfit'],
+          ['Merriweather', 'Source Serif 4'],
+        ],
+        [
+          'Sans-serif / Sans-serif',
+          ['Plus Jakarta Sans', 'Space Grotesk'],
+          ['Inter', 'DM Sans'],
+        ],
+        [
+          'Serif / Serif',
+          ['Cormorant Garamond', 'Cinzel'],
+          ['Lora', 'EB Garamond'],
+        ],
+      ]
       for (const [label, headings, bodies] of fontGroups) {
-        const group = document.createElement('optgroup');
-        group.label = label;
+        const group = document.createElement('optgroup')
+        group.label = label
         for (const heading of headings) {
           for (const body of bodies) {
-            if (!fontPairs.has(`${heading}|${body}`)) addFontPair(group, heading, body);
+            if (!fontPairs.has(`${heading}|${body}`))
+              addFontPair(group, heading, body)
           }
         }
-        fontSelect.append(group);
+        fontSelect.append(group)
       }
 
       function applyFontPair() {
-        const { heading, body } = fontPairs.get(fontSelect.value);
-        const sample = document.getElementById('sample');
-        sample.style.setProperty('--heading-font', `"${heading}"`);
-        sample.style.setProperty('--body-font', `"${body}"`);
-        const params = new URLSearchParams();
-        params.append('family', `${heading}:wght@500;600`);
-        if (body !== 'Bierstadt') params.append('family', `${body}:wght@400`);
-        params.set('display', 'swap');
-        document.getElementById('font-stylesheet').href = `https://fonts.googleapis.com/css2?${params}`;
+        const { heading, body } = fontPairs.get(fontSelect.value)
+        const sample = document.getElementById('sample')
+        sample.style.setProperty('--heading-font', `"${heading}"`)
+        sample.style.setProperty('--body-font', `"${body}"`)
+        const params = new URLSearchParams()
+        params.append('family', `${heading}:wght@500;600`)
+        if (body !== 'Bierstadt') params.append('family', `${body}:wght@400`)
+        params.set('display', 'swap')
+        document.getElementById('font-stylesheet').href =
+          `https://fonts.googleapis.com/css2?${params}`
         try {
-          localStorage.setItem(fontStorageKey, fontSelect.value);
+          localStorage.setItem(fontStorageKey, fontSelect.value)
         } catch {
           // Font selection still works when browser storage is unavailable.
         }
       }
 
-      fontSelect.value = 'Playfair Display|Bierstadt';
+      fontSelect.value = 'Playfair Display|Bierstadt'
       try {
-        const stored = localStorage.getItem(fontStorageKey);
-        if (fontPairs.has(stored)) fontSelect.value = stored;
+        const stored = localStorage.getItem(fontStorageKey)
+        if (fontPairs.has(stored)) fontSelect.value = stored
       } catch {
         // Use the original font pair if browser storage is unavailable.
       }
-      fontSelect.addEventListener('change', applyFontPair);
-      applyFontPair();
+      fontSelect.addEventListener('change', applyFontPair)
+      applyFontPair()
 
       function createControls(pickerId, currentId, historyId, updateColor) {
-      const picker = document.getElementById(pickerId);
-      const current = document.getElementById(currentId);
-      const history = document.getElementById(historyId);
-      const savedColors = new Set();
-      const storageKey = `color-playground:${pickerId}`;
-      let restoring = true;
+        const picker = document.getElementById(pickerId)
+        const current = document.getElementById(currentId)
+        const history = document.getElementById(historyId)
+        const savedColors = new Set()
+        const storageKey = `color-playground:${pickerId}`
+        let restoring = true
 
-      function persistColors() {
-        if (restoring) return;
+        function persistColors() {
+          if (restoring) return
+          try {
+            localStorage.setItem(
+              storageKey,
+              JSON.stringify({
+                selected: picker.value,
+                history: [...savedColors],
+              }),
+            )
+          } catch {
+            // Keep the controls usable when browser storage is unavailable or full.
+          }
+        }
+
+        function applyColor(color) {
+          updateColor(color)
+          picker.value = color
+          current.value = color.toUpperCase()
+          current.removeAttribute('aria-invalid')
+          current.setCustomValidity('')
+          persistColors()
+        }
+
+        function rememberColor(color) {
+          color = color.toLowerCase()
+          if (savedColors.has(color)) return
+          savedColors.add(color)
+          const item = document.createElement('li')
+          const button = document.createElement('button')
+          button.type = 'button'
+          button.setAttribute('aria-label', `Apply ${color.toUpperCase()}`)
+          const swatch = document.createElement('span')
+          swatch.className = 'swatch'
+          swatch.style.backgroundColor = color
+          swatch.setAttribute('aria-hidden', 'true')
+          button.append(swatch, document.createTextNode(color.toUpperCase()))
+          button.addEventListener('click', () => {
+            applyColor(color)
+            rememberColor(color)
+          })
+          const remove = document.createElement('button')
+          remove.type = 'button'
+          remove.className = 'remove'
+          remove.textContent = '×'
+          remove.setAttribute(
+            'aria-label',
+            `Remove ${color.toUpperCase()} from history`,
+          )
+          remove.addEventListener('click', () => {
+            savedColors.delete(color)
+            const next = item.nextElementSibling || item.previousElementSibling
+            item.remove()
+            persistColors()
+            if (next) next.querySelector('.remove').focus()
+            else picker.focus()
+          })
+          item.append(button, remove)
+          history.prepend(item)
+          persistColors()
+        }
+
+        picker.addEventListener('input', () => applyColor(picker.value))
+        picker.addEventListener('change', () => {
+          applyColor(picker.value)
+          rememberColor(picker.value)
+        })
+        function applyHex() {
+          let hex = current.value.trim().replace(/^#/, '')
+          if (!/^(?:[0-9a-f]{3}|[0-9a-f]{6})$/i.test(hex)) {
+            current.setAttribute('aria-invalid', 'true')
+            current.setCustomValidity('Enter a 3- or 6-digit hex color.')
+            current.reportValidity()
+            return
+          }
+          if (hex.length === 3)
+            hex = [...hex].map((char) => char + char).join('')
+          const color = `#${hex.toLowerCase()}`
+          applyColor(color)
+          rememberColor(color)
+        }
+        current.addEventListener('change', applyHex)
+        current.addEventListener('keydown', (event) => {
+          if (event.key === 'Enter') {
+            event.preventDefault()
+            applyHex()
+          }
+        })
+        current.addEventListener('input', () => {
+          current.removeAttribute('aria-invalid')
+          current.setCustomValidity('')
+        })
+        let stored = null
         try {
-          localStorage.setItem(storageKey, JSON.stringify({
-            selected: picker.value,
-            history: [...savedColors],
-          }));
+          const parsed = JSON.parse(localStorage.getItem(storageKey))
+          if (
+            parsed &&
+            /^#[0-9a-f]{6}$/i.test(parsed.selected) &&
+            Array.isArray(parsed.history)
+          ) {
+            stored = parsed
+          }
         } catch {
-          // Keep the controls usable when browser storage is unavailable or full.
+          // Fall back to the initial color if saved data cannot be read.
         }
+        if (stored) {
+          for (const color of stored.history) {
+            if (typeof color === 'string' && /^#[0-9a-f]{6}$/i.test(color))
+              rememberColor(color)
+          }
+        } else {
+          rememberColor(picker.value)
+        }
+        restoring = false
+        applyColor(stored ? stored.selected.toLowerCase() : picker.value)
       }
 
-      function applyColor(color) {
-        updateColor(color);
-        picker.value = color;
-        current.value = color.toUpperCase();
-        current.removeAttribute('aria-invalid');
-        current.setCustomValidity('');
-        persistColors();
-      }
-
-      function rememberColor(color) {
-        color = color.toLowerCase();
-        if (savedColors.has(color)) return;
-        savedColors.add(color);
-        const item = document.createElement('li');
-        const button = document.createElement('button');
-        button.type = 'button';
-        button.setAttribute('aria-label', `Apply ${color.toUpperCase()}`);
-        const swatch = document.createElement('span');
-        swatch.className = 'swatch';
-        swatch.style.backgroundColor = color;
-        swatch.setAttribute('aria-hidden', 'true');
-        button.append(swatch, document.createTextNode(color.toUpperCase()));
-        button.addEventListener('click', () => {
-          applyColor(color);
-          rememberColor(color);
-        });
-        const remove = document.createElement('button');
-        remove.type = 'button';
-        remove.className = 'remove';
-        remove.textContent = '×';
-        remove.setAttribute('aria-label', `Remove ${color.toUpperCase()} from history`);
-        remove.addEventListener('click', () => {
-          savedColors.delete(color);
-          const next = item.nextElementSibling || item.previousElementSibling;
-          item.remove();
-          persistColors();
-          if (next) next.querySelector('.remove').focus();
-          else picker.focus();
-        });
-        item.append(button, remove);
-        history.prepend(item);
-        persistColors();
-      }
-
-      picker.addEventListener('input', () => applyColor(picker.value));
-      picker.addEventListener('change', () => {
-        applyColor(picker.value);
-        rememberColor(picker.value);
-      });
-      function applyHex() {
-        let hex = current.value.trim().replace(/^#/, '');
-        if (!/^(?:[0-9a-f]{3}|[0-9a-f]{6})$/i.test(hex)) {
-          current.setAttribute('aria-invalid', 'true');
-          current.setCustomValidity('Enter a 3- or 6-digit hex color.');
-          current.reportValidity();
-          return;
-        }
-        if (hex.length === 3) hex = [...hex].map(char => char + char).join('');
-        const color = `#${hex.toLowerCase()}`;
-        applyColor(color);
-        rememberColor(color);
-      }
-      current.addEventListener('change', applyHex);
-      current.addEventListener('keydown', event => {
-        if (event.key === 'Enter') {
-          event.preventDefault();
-          applyHex();
-        }
-      });
-      current.addEventListener('input', () => {
-        current.removeAttribute('aria-invalid');
-        current.setCustomValidity('');
-      });
-      let stored = null;
-      try {
-        const parsed = JSON.parse(localStorage.getItem(storageKey));
-        if (parsed && /^#[0-9a-f]{6}$/i.test(parsed.selected) && Array.isArray(parsed.history)) {
-          stored = parsed;
-        }
-      } catch {
-        // Fall back to the initial color if saved data cannot be read.
-      }
-      if (stored) {
-        for (const color of stored.history) {
-          if (typeof color === 'string' && /^#[0-9a-f]{6}$/i.test(color)) rememberColor(color);
-        }
-      } else {
-        rememberColor(picker.value);
-      }
-      restoring = false;
-      applyColor(stored ? stored.selected.toLowerCase() : picker.value);
-      }
-
-      createControls('color', 'current', 'history', color => {
-        document.body.style.backgroundColor = color;
-        const channels = color.slice(1).match(/../g).map(channel => parseInt(channel, 16) / 255);
-        const luminance = channels.map(channel => channel <= 0.04045 ? channel / 12.92 : ((channel + 0.055) / 1.055) ** 2.4);
-        document.body.style.color = luminance[0] * 0.2126 + luminance[1] * 0.7152 + luminance[2] * 0.0722 > 0.179 ? '#172033' : '#ffffff';
-      });
-      createControls('text-color', 'text-current', 'text-history', color => {
-        document.getElementById('sample').style.color = color;
-      });
+      createControls('color', 'current', 'history', (color) => {
+        document.body.style.backgroundColor = color
+        const channels = color
+          .slice(1)
+          .match(/../g)
+          .map((channel) => parseInt(channel, 16) / 255)
+        const luminance = channels.map((channel) =>
+          channel <= 0.04045
+            ? channel / 12.92
+            : ((channel + 0.055) / 1.055) ** 2.4,
+        )
+        document.body.style.color =
+          luminance[0] * 0.2126 +
+            luminance[1] * 0.7152 +
+            luminance[2] * 0.0722 >
+          0.179
+            ? '#172033'
+            : '#ffffff'
+      })
+      createControls('text-color', 'text-current', 'text-history', (color) => {
+        document.getElementById('sample').style.color = color
+      })
     </script>
   </body>
 </html>

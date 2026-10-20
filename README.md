@@ -20,6 +20,19 @@ npm run preview
 
 The app uses hash routes (`/#/` and `/#/about`) so navigation and refreshes work on static hosting without server rewrites. Unknown routes display a not-found page.
 
+## Code quality
+
+```sh
+npm run lint
+npm run lint:fix
+npm run format
+npm run format:check
+```
+
+ESLint uses the recommended JavaScript, TypeScript, React Hooks, and Vite Fast Refresh rules. Prettier handles formatting with two spaces, single quotes, no semicolons, and LF line endings. `eslint-config-prettier` disables conflicting lint rules. Both tools skip `old/`, `dist/`, and coverage output.
+
+TypeScript 6 is used for compatibility with the TypeScript ESLint parser.
+
 ## Previous site
 
 `old/` contains the previous source, public assets, built site, configuration, and workflow as they existed before the reset. It is an archive and is not part of the new app's build.
