@@ -55,9 +55,32 @@
   gap: 8px;
 }
 
+.contents h1,
+.contents h4 {
+  text-transform: none;
+}
+
+.contents p {
+  line-height: 1.7;
+}
+
 .socialIcons {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 10px;
-  /* padding: 10px 0; */
+}
+
+.contactLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 48px;
+  min-height: 48px;
+  text-decoration: none;
+}
+
+.contactLink:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
 }

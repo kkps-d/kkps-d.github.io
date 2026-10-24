@@ -17,22 +17,15 @@ function PdfModal({ pdfPath }) {
         >
           <div className={styles.unsupportedMessage}>
             Your browser does not support viewing PDF files. Please download the
-            resume instead
-            <Button
-              onClick={() => {
-                const a = document.createElement("a");
-                a.href = pdfPath;
-                a.download = pdfPath;
-                document.body.appendChild(a);
-                a.click();
-                document.body.removeChild(a);
-              }}
-            >
-              Download Resume
-            </Button>
+            CV using the link below.
           </div>
         </object>
-        <Button onClick={() => navigate("/")}>Close</Button>
+        <div className={styles.actions}>
+          <a href={pdfPath} download="Kaung Khant Pyae Sone CV 2026.pdf">
+            Download CV
+          </a>
+          <Button onClick={() => navigate("/")}>Close</Button>
+        </div>
       </div>
     </Modal>
   );

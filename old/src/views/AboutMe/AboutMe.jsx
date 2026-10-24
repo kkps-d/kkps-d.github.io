@@ -17,30 +17,29 @@ function AboutMe() {
       />
       <div className={styles.contents}>
         <h1>Kaung Khant Pyae Sone</h1>
-        <h4>software developer: web, native, or embedded!</h4>
-        <h4 className="lighter-text">located in San Jose, California</h4>
+        <h4>Full-stack software engineer</h4>
+        <h4 className="lighter-text">Based in Myanmar, open to relocation</h4>
         <HorizontalDivider width="100px" />
         <p>
-          Hey there, I'm Kaung! I'm an aspiring software developer, and I've
-          mainly worked with web technologies such as HTML/CSS/JS and Node.js,
-          and Python. I also have a growing interest in AI, specifically machine
-          learning and computer vision applications. I'm also learning embedded
-          programming on the Arduino platform as a hobby. Anyways, I'm
-          interested in something as long as it's practical and serves a
-          purpose!
-        </p>
-
-        <p>
-          If you're interested in talking to me, reach out via email or LinkedIn. Links below!
-          I'm looking forward to it!
+          Full-stack software engineer with U.S. education and professional
+          experience, holding a B.Sc. in Computer Science from the University of
+          the Pacific. Experienced in designing, modernizing, and delivering
+          full-stack applications, with work spanning cloud architecture,
+          distributed system integration, application security, performance
+          optimization, and legacy modernization. Proven ability to rapidly
+          understand complex systems, translate business requirements into
+          technical solutions, and take ownership from architecture and
+          implementation through delivery.
         </p>
 
         <p className="lighter-text">
-          <b>Education:</b> University of the Pacific, 3.8,
+          <b>Education:</b> University of the Pacific, B.Sc. Computer Science,
+          GPA: 3.80/4.00 —
           <em> magna cum laude</em>
         </p>
         <p className="lighter-text">
-          <b>Employed at:</b> Looking for work!
+          <b>Employed at:</b> KBZ Bank, Full-stack Engineer — Yangon, Myanmar
+          (April 2026 – Current)
         </p>
 
         <div className={styles.socialIcons}>
@@ -66,7 +65,17 @@ function AboutMe() {
           >
             <i className="bi bi-github"></i>
           </Button>
-          <Button onClick={() => navigate("resume")}>View Resume</Button>
+          <a
+            className={styles.contactLink}
+            href="https://wa.me/12099052480"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="WhatsApp: +1 (209) 905 2480"
+            title="WhatsApp: +1 (209) 905 2480"
+          >
+            <i className="bi bi-whatsapp" aria-hidden="true"></i>
+          </a>
+          <Button onClick={() => navigate("resume")}>View CV</Button>
         </div>
         <br />
       </div>

@@ -42,10 +42,11 @@ export const portfolioData = [
         urlPath: "gradiotronics",
         cardTitle: "Gradiotronics",
         cardDesc:
-          "Arduino-based in-sole pressure to measure plantar pressure & web app to interact with the data.",
+          "Collaborated with Bioengineering students to build an Arduino-based in-sole pressure sensor designed to visualize pressure on the foot and discover gait-related issues of the wearer",
         cardImgPath: "/img/gradiotronics/card.png",
         fullDesc: [
-          "At Gradiotronics, we're building an insole force sensor that allows us to measure the rate of force development (RFD) of an athlete, which is a measure of how fast an athelete can produce force. The Arduino-based sensor records and transmits the data over Bluetooth Low Energy (BLE) to the web-app.",
+          "Collaborated with Bioengineering students to build an Arduino-based in-sole pressure sensor designed to visualize pressure on the foot and discover gait-related issues of the wearer",
+          "Developed a video-player-like web app that pairs with the Arduino sensor over Bluetooth, and enables visualization of real-time data or recording it and playing it back",
           "I was responsible for the web app and Arduino code. It is built in pure HTML, CSS, and JS, and was originally developed as an Electron app, but was converted to a fully web-based app targeting Google Chrome for greater future compatibility with mobile devices. The app can visualize data from the Arduino, either live or recorded, trimmed, and saved to a .csv file. Chart.js and Heatmap.js provide the visuals, but everything else was written from scratch.",
           "Being an interdisciplinary project between Computer Science and Bioengineering, I would like to thank my bioengineers Chelsea Igtanloc, Joaquin Gonzales and Vicky Guan, who did amazing work and got us the Recognition of Excellence in Engineering Design in Bioengineering!",
         ],
