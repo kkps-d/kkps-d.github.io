@@ -1,0 +1,574 @@
+{
+  "schemaVersion": "1.0.0",
+  "sources": [
+    {
+      "id": "cv-2026",
+      "type": "cv",
+      "path": "/Kaung Khant Pyae Sone CV 2026.pdf",
+      "editablePath": "/Kaung Khant Pyae Sone CV 2026.docx",
+      "priority": 1
+    },
+    {
+      "id": "archived-portfolio",
+      "type": "portfolio",
+      "path": "old/src/global/portfolio-data.js",
+      "priority": 2
+    },
+    {
+      "id": "archived-about",
+      "type": "portfolio",
+      "path": "old/src/views/AboutMe/AboutMe.jsx",
+      "priority": 2
+    }
+  ],
+  "person": {
+    "id": "kaung-khant-pyae-sone",
+    "sourceId": "cv-2026",
+    "name": "Kaung Khant Pyae Sone",
+    "title": "Full-stack software engineer",
+    "location": "Based in Myanmar",
+    "relocation": "Open to relocation",
+    "contacts": [
+      {
+        "id": "email",
+        "label": "kaung.kkps01@gmail.com",
+        "url": "mailto:kaung.kkps01@gmail.com",
+        "sourceId": "cv-2026"
+      },
+      {
+        "id": "linkedin",
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/kaung-sone",
+        "sourceId": "cv-2026"
+      },
+      {
+        "id": "whatsapp",
+        "label": "WhatsApp: +1 (209) 905 2480",
+        "url": "https://wa.me/12099052480",
+        "sourceId": "cv-2026"
+      },
+      {
+        "id": "github",
+        "label": "GitHub",
+        "url": "https://github.com/kkps-d/",
+        "sourceId": "archived-about"
+      }
+    ],
+    "summary": "Full-stack software engineer with U.S. education and professional experience, holding a B.Sc. in Computer Science from the University of the Pacific. Experienced in designing, modernizing, and delivering full-stack applications, with work spanning cloud architecture, distributed system integration, application security, performance optimization, and legacy modernization. Proven ability to rapidly understand complex systems, translate business requirements into technical solutions, and take ownership from architecture and implementation through delivery.",
+    "cvUrl": "/Kaung%20Khant%20Pyae%20Sone%20CV%202026.pdf"
+  },
+  "experience": [
+    {
+      "id": "kbz-bank",
+      "sourceId": "cv-2026",
+      "title": "Full-stack Engineer",
+      "company": "KBZ Bank",
+      "location": "Yangon, Myanmar",
+      "startDate": "2026-04",
+      "endDate": null,
+      "current": true,
+      "dateLabel": "April 2026 – Current",
+      "summary": "Redesigned the mobile experience of an existing HR system within my first 2 months",
+      "highlights": [
+        "Redesigned the mobile experience of an existing HR system within my first 2 months, creating role-oriented employee and manager dashboards around frequently used workflows and at-a-glance information, alongside mobile bottom-tab and navigation-stack-style navigation within the existing React SPA",
+        "Designed and delivered a public-facing Job Portal from requirements to QA on a ~1-month timeline, using React and ASP.NET with ASP.NET Identity and SMS OTP authentication",
+        "Architected asynchronous data synchronization between a public-facing Job Portal and an internal recruitment system using Amazon SNS/SQS and MassTransit, implementing full-state message snapshots and row-version checks to discard stale updates and maintain eventual consistency across independently deployed microservices",
+        "Designed and provisioned the Job Portal's AWS infrastructure using ECS, CloudFront, RDS, and S3, supporting containerized application deployment, data persistence, and content delivery",
+        "Acted as the development team's technical coordinator and a liaison with the project BA, translating business requirements into technical specifications and using AI-assisted engineering workflows to elaborate requirements, accelerate implementation, and validate delivered functionality against requirements",
+        "Built custom code analysis tools using Roslyn and the TypeScript Compiler API to flag potentially unsafe authorization patterns, trace React pages through TanStack Query hooks to backend API endpoints for access-control reviews, and enforce frontend layout conventions"
+      ]
+    },
+    {
+      "id": "caterpillar",
+      "sourceId": "cv-2026",
+      "title": "Software Developer",
+      "company": "Caterpillar Inc.",
+      "location": "South Dakota, United States",
+      "startDate": "2023-12",
+      "endDate": "2025-12",
+      "current": false,
+      "dateLabel": "Dec 2023 – Dec 2025",
+      "summary": "Held full ownership of the modern engineering content management system project and multiple internal PowerApps applications",
+      "highlights": [
+        "Held full ownership of the modern engineering content management system project and multiple internal PowerApps applications, working across requirements, implementation, testing, stakeholder coordination, deployment, and ongoing enhancements",
+        "Modernized a legacy .NET engineering content management system used by 500+ users and 10+ API integrations into a Node.js/Express + React application with multi-tenant support while simplifying the architecture, preserving database and API compatibility and supporting PingFederate and Microsoft Entra authentication for apps and users across all APIs",
+        "Reduced average content search query times by over 80% by replacing complex SQL stored procedures with dynamically constructed queries, enabling pagination and improving application performance",
+        "Rebuilt the legacy CMS frontend in React, developing custom components including an engineering drawing viewer and Unity WebGL 3D model viewer to deliver a richer, responsive user experience",
+        "Owned the design and delivery of an incident management application used by 100+ users, translating stakeholder requirements into a PowerApps solution with RBAC, offline support, responsive UX, Azure Logic Apps automation, and Power BI reporting",
+        "Reduced runtime of a .NET product image processing application by 70% by minimizing filesystem access and simplifying LINQ queries, while delivering additional functionality including copyright metadata embedding"
+      ]
+    },
+    {
+      "id": "stryker",
+      "sourceId": "cv-2026",
+      "title": "Net Dev CO-OP",
+      "company": "Stryker (Formerly Vocera)",
+      "location": "California, United States",
+      "startDate": "2022-05",
+      "endDate": "2022-12",
+      "current": false,
+      "dateLabel": "May 2022 – Dec 2022",
+      "summary": "Developed a web dashboard used by 10+ support engineers and managers",
+      "highlights": [
+        "Developed a web dashboard used by 10+ support engineers and managers that displays the availability of support engineers who are on-call using data from Salesforce"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "gradiotronics",
+      "name": "Gradiotronics",
+      "year": 2023,
+      "sourceId": "archived-portfolio",
+      "summary": "Collaborated with Bioengineering students to build an Arduino-based in-sole pressure sensor designed to visualize pressure on the foot and discover gait-related issues of the wearer",
+      "summarySourceId": "cv-2026",
+      "description": [
+        {
+          "text": "Collaborated with Bioengineering students to build an Arduino-based in-sole pressure sensor designed to visualize pressure on the foot and discover gait-related issues of the wearer",
+          "sourceId": "cv-2026"
+        },
+        {
+          "text": "Developed a video-player-like web app that pairs with the Arduino sensor over Bluetooth, and enables visualization of real-time data or recording it and playing it back",
+          "sourceId": "cv-2026"
+        },
+        {
+          "text": "I was responsible for the web app and Arduino code. It is built in pure HTML, CSS, and JS, and was originally developed as an Electron app, but was converted to a fully web-based app targeting Google Chrome for greater future compatibility with mobile devices. The app can visualize data from the Arduino, either live or recorded, trimmed, and saved to a .csv file. Chart.js and Heatmap.js provide the visuals, but everything else was written from scratch.",
+          "sourceId": "archived-portfolio"
+        }
+      ],
+      "githubUrl": "https://github.com/kkps-d/gradiotronics",
+      "demoUrl": "https://www.kkps.dev/gradiotronics/",
+      "technologies": ["c++", "html", "css", "js", "arduino"],
+      "screenshots": [
+        {
+          "src": "/projects/gradiotronics/web-app.png",
+          "alt": "Gradiotronics — web app",
+          "sourceId": "archived-portfolio",
+          "width": 444,
+          "height": 302
+        },
+        {
+          "src": "/projects/gradiotronics/hardware-assembly.png",
+          "alt": "Gradiotronics — hardware assembly",
+          "sourceId": "archived-portfolio",
+          "width": 578,
+          "height": 562
+        },
+        {
+          "src": "/projects/gradiotronics/prototype-top.png",
+          "alt": "Gradiotronics — prototype top",
+          "sourceId": "archived-portfolio",
+          "width": 845,
+          "height": 475
+        },
+        {
+          "src": "/projects/gradiotronics/prototype-bottom.png",
+          "alt": "Gradiotronics — prototype bottom",
+          "sourceId": "archived-portfolio",
+          "width": 900,
+          "height": 506
+        },
+        {
+          "src": "/projects/gradiotronics/sole sensors.jpg",
+          "alt": "Gradiotronics — sole sensors",
+          "sourceId": "archived-portfolio",
+          "width": 252,
+          "height": 549
+        }
+      ]
+    },
+    {
+      "id": "button-board-helper",
+      "name": "Button Board Windows Helper",
+      "year": null,
+      "sourceId": "archived-portfolio",
+      "summary": "Helper program that helps interface with Windows APIs, currently for controlling audio endpoints. Web UI for testing the program is included.",
+      "summarySourceId": "archived-portfolio",
+      "description": [
+        {
+          "text": "This is a helper program for Button Board (work in progress) that allows it to access Windows APIs by sending messages via TCP. This program is currently mainly used to get audio endpoints and audio session information and control them via the CoreAudio library (morphx666/CoreAudio, thanks!), but more features should be added soon.",
+          "sourceId": "archived-portfolio"
+        },
+        {
+          "text": "The repository also includes a web dashboard and server that is used to test all the functionality of the helper program.",
+          "sourceId": "archived-portfolio"
+        }
+      ],
+      "githubUrl": "https://github.com/kkps-d/button-board-win32-helper/",
+      "demoUrl": null,
+      "technologies": ["c#", "html", "css", "js", "node"],
+      "screenshots": [
+        {
+          "src": "/projects/button-board-helper/card.png",
+          "alt": "Button Board Windows Helper — card",
+          "sourceId": "archived-portfolio",
+          "width": 1122,
+          "height": 963
+        }
+      ]
+    },
+    {
+      "id": "personal-website",
+      "name": "Personal Website",
+      "year": 2023,
+      "sourceId": "archived-portfolio",
+      "summary": "Website written in React to inform you about myself and showcase my projects",
+      "summarySourceId": "archived-portfolio",
+      "description": [
+        {
+          "text": "This website is built with React using create-react-app. It serves as a personal website to inform you more about myself and as a showcase to my other projects, but it was also a good way to put my React skills into practice. The website is then later ported to Vite.js and React Router was added to make the page into a single-page app.",
+          "sourceId": "archived-portfolio"
+        },
+        {
+          "text": "The website is mostly complete, but there are still a few quirks with the image viewer, and proper mobile support has yet to be added. Feel free to contact me if you have any feedback!",
+          "sourceId": "archived-portfolio"
+        }
+      ],
+      "githubUrl": "https://github.com/kkps-d/kkps-d.github.io",
+      "demoUrl": null,
+      "technologies": ["html", "css", "js", "react"],
+      "screenshots": [
+        {
+          "src": "/projects/personal-website/picture1.png",
+          "alt": "Personal Website — picture1",
+          "sourceId": "archived-portfolio",
+          "width": 508,
+          "height": 329
+        }
+      ]
+    },
+    {
+      "id": "typing-game",
+      "name": "Typing Tester",
+      "year": 2023,
+      "sourceId": "archived-portfolio",
+      "summary": "Typing testing game written in python and pygame featuring multiple game modes and statistics",
+      "summarySourceId": "archived-portfolio",
+      "description": [
+        {
+          "text": "I worked on this project with three other teammates as part of the coursework, where we practiced being a Scrum team, with me being one of two developers.",
+          "sourceId": "archived-portfolio"
+        },
+        {
+          "text": "The app was written in Python using pygame for the graphics and matplotlib for the statistics at the end of each test. I worked mainly on text rendering for the gameplay and helped developed other features, such as statistics and unit tests.",
+          "sourceId": "archived-portfolio"
+        }
+      ],
+      "githubUrl": "https://github.com/kkps-d/uop-classwork-repository/tree/main/comp-129-software-engineering/typing-tester",
+      "demoUrl": "https://replit.com/@kkps-d/typing-tester",
+      "technologies": ["python", "pytest", "pygame"],
+      "screenshots": [
+        {
+          "src": "/projects/typing-game/main-menu.png",
+          "alt": "Typing Tester — main menu",
+          "sourceId": "archived-portfolio",
+          "width": 1867,
+          "height": 997
+        },
+        {
+          "src": "/projects/typing-game/typing-test.png",
+          "alt": "Typing Tester — typing test",
+          "sourceId": "archived-portfolio",
+          "width": 1869,
+          "height": 997
+        },
+        {
+          "src": "/projects/typing-game/statistics.png",
+          "alt": "Typing Tester — statistics",
+          "sourceId": "archived-portfolio",
+          "width": 1868,
+          "height": 998
+        }
+      ]
+    },
+    {
+      "id": "time-app",
+      "name": "Time Management App",
+      "year": 2023,
+      "sourceId": "archived-portfolio",
+      "summary": "Interactive figma prototype of a time management app created for human-computer interface class",
+      "summarySourceId": "archived-portfolio",
+      "description": [
+        {
+          "text": "This is an interactive Figma prototype of a time management app that our team developed for Human-Computer Interface class. The app was the product of a semester long research-and-developement cycle.",
+          "sourceId": "archived-portfolio"
+        },
+        {
+          "text": "The app was designed to tackle the lack of integration between a to-do list and a Calendar with events with start and end dates. The big features of the app are being able to see to-do tasks and events on the same screen, and being able to associate tasks to an event on the calendar.",
+          "sourceId": "archived-portfolio"
+        }
+      ],
+      "githubUrl": null,
+      "demoUrl": "https://www.figma.com/proto/2u5BolbjmlhcVWZAukkZev/Final-prototype?page-id=0%3A1&type=design&node-id=231-2&viewport=1701%2C-354%2C0.22&t=up6zbOScm7vhVc5Z-1&scaling=scale-down&starting-point-node-id=231%3A2&show-proto-sidebar=1&mode=design",
+      "technologies": ["figma"],
+      "screenshots": [
+        {
+          "src": "/projects/time-app/1.png",
+          "alt": "Time Management App — 1",
+          "sourceId": "archived-portfolio",
+          "width": 1286,
+          "height": 837
+        },
+        {
+          "src": "/projects/time-app/2.png",
+          "alt": "Time Management App — 2",
+          "sourceId": "archived-portfolio",
+          "width": 1282,
+          "height": 834
+        },
+        {
+          "src": "/projects/time-app/3.png",
+          "alt": "Time Management App — 3",
+          "sourceId": "archived-portfolio",
+          "width": 1282,
+          "height": 833
+        },
+        {
+          "src": "/projects/time-app/4.png",
+          "alt": "Time Management App — 4",
+          "sourceId": "archived-portfolio",
+          "width": 1282,
+          "height": 834
+        },
+        {
+          "src": "/projects/time-app/5.png",
+          "alt": "Time Management App — 5",
+          "sourceId": "archived-portfolio",
+          "width": 1282,
+          "height": 836
+        }
+      ]
+    },
+    {
+      "id": "exp-eval",
+      "name": "Expression Evaluator",
+      "year": 2022,
+      "sourceId": "archived-portfolio",
+      "summary": "Basic mathematical expression parser and evaluator in Python written as part of coursework",
+      "summarySourceId": "archived-portfolio",
+      "description": [
+        {
+          "text": "I built a basic mathematical expression parser and evaluator in Python that is part of a toy imperative language. The objective of the project was to learn how recursive descent parsers work as part of the coursework for COMP 141 Programming Languages",
+          "sourceId": "archived-portfolio"
+        }
+      ],
+      "githubUrl": "https://github.com/kkps-d/uop-classwork-repository/tree/main/comp-141-programming-languages",
+      "demoUrl": "https://replit.com/@kkps-d/expression-evaluator#Readme.md",
+      "technologies": ["python"],
+      "screenshots": [
+        {
+          "src": "/projects/exp-eval/1.png",
+          "alt": "Expression Evaluator — 1",
+          "sourceId": "archived-portfolio",
+          "width": 558,
+          "height": 592
+        }
+      ]
+    },
+    {
+      "id": "pair-finder",
+      "name": "Closest Pair Finder",
+      "year": 2022,
+      "sourceId": "archived-portfolio",
+      "summary": "Web-based visualizer for closest pair finding algorithms written as part of coursework",
+      "summarySourceId": "archived-portfolio",
+      "description": [
+        {
+          "text": "Web-based visualizer to compare algorithms that finds the closest pair of points within the provided points.",
+          "sourceId": "archived-portfolio"
+        }
+      ],
+      "githubUrl": "https://github.com/kkps-d/closest-pair-finder",
+      "demoUrl": "https://www.kkps.dev/closest-pair-finder/",
+      "technologies": ["html", "css", "js"],
+      "screenshots": [
+        {
+          "src": "/projects/pair-finder/1.png",
+          "alt": "Closest Pair Finder — 1",
+          "sourceId": "archived-portfolio",
+          "width": 709,
+          "height": 409
+        }
+      ]
+    },
+    {
+      "id": "discord-bot",
+      "name": "Discord Bot",
+      "year": 2021,
+      "sourceId": "archived-portfolio",
+      "summary": "Written in Node.js with Discord.js to help manage discord server and add features",
+      "summarySourceId": "archived-portfolio",
+      "description": [
+        {
+          "text": "A Discord Bot written in Node.js and the Electron.js library. It is mainly used to assign roles to the users according to how much time they have spent in voice chat, but it can also show the time spent of each user and send rich messages on behalf of an admin.",
+          "sourceId": "archived-portfolio"
+        },
+        {
+          "text": "The two latter features can be performed on the web-based control panel, which communicates with the Node.js process via Socket.io.",
+          "sourceId": "archived-portfolio"
+        }
+      ],
+      "githubUrl": "https://github.com/kkps-d/dbot",
+      "demoUrl": null,
+      "technologies": ["html", "css", "js", "node"],
+      "screenshots": [
+        {
+          "src": "/projects/discord-bot/1.png",
+          "alt": "Discord Bot — 1",
+          "sourceId": "archived-portfolio",
+          "width": 994,
+          "height": 640
+        },
+        {
+          "src": "/projects/discord-bot/2.png",
+          "alt": "Discord Bot — 2",
+          "sourceId": "archived-portfolio",
+          "width": 994,
+          "height": 640
+        },
+        {
+          "src": "/projects/discord-bot/3.png",
+          "alt": "Discord Bot — 3",
+          "sourceId": "archived-portfolio",
+          "width": 977,
+          "height": 638
+        },
+        {
+          "src": "/projects/discord-bot/4.png",
+          "alt": "Discord Bot — 4",
+          "sourceId": "archived-portfolio",
+          "width": 993,
+          "height": 640
+        }
+      ]
+    },
+    {
+      "id": "hangman",
+      "name": "Hangman",
+      "year": 2021,
+      "sourceId": "archived-portfolio",
+      "summary": "A command-line game written in C and ported to MIPS assembly as part of coursework",
+      "summarySourceId": "archived-portfolio",
+      "description": [
+        {
+          "text": "A hangman game written in C for the command-line. It is then ported to and optimized for MIPS assembly which is run on QtSpim on Ubuntu.",
+          "sourceId": "archived-portfolio"
+        }
+      ],
+      "githubUrl": "https://github.com/kkps-d/uop-classwork-repository/tree/main/ecpe-170-computer-systems-and-networking/lab12",
+      "demoUrl": "https://replit.com/@kkps-d/hangman",
+      "technologies": ["mips"],
+      "screenshots": [
+        {
+          "src": "/projects/hangman/1.png",
+          "alt": "Hangman — 1",
+          "sourceId": "archived-portfolio",
+          "width": 414,
+          "height": 161
+        }
+      ]
+    },
+    {
+      "id": "wifi-light",
+      "name": "Wi-Fi LED strip",
+      "year": 2020,
+      "sourceId": "archived-portfolio",
+      "summary": "LED strip based on ESP-32 running Arduino C++ controlled by a web interface",
+      "summarySourceId": "archived-portfolio",
+      "description": [
+        {
+          "text": "An ESP-32 wired to a LED strip connects to an MQTT server running on a Raspberry Pi over WiFi. It gets picked up by a Node.js client scanning the network for these ESP-32 devices. The client can control the ESP-32 via the web interface.",
+          "sourceId": "archived-portfolio"
+        }
+      ],
+      "githubUrl": "https://github.com/kkps-d/Home32-Server",
+      "demoUrl": null,
+      "technologies": ["c++", "html", "css", "js", "node", "arduino"],
+      "screenshots": [
+        {
+          "src": "/projects/wifi-light/card.png",
+          "alt": "Wi-Fi LED strip — card",
+          "sourceId": "archived-portfolio",
+          "width": 310,
+          "height": 230
+        }
+      ]
+    },
+    {
+      "id": "gallery",
+      "name": "photo gallery",
+      "year": 2019,
+      "sourceId": "archived-portfolio",
+      "summary": "A web photo gallery showcasing a tour of my team around the UOP campus",
+      "summarySourceId": "archived-portfolio",
+      "description": [
+        {
+          "text": "Designed a static website that showcases photos of me and my friends around the UOP campus as part of coursework.",
+          "sourceId": "archived-portfolio"
+        }
+      ],
+      "githubUrl": "https://github.com/kkps-d/engr-gp-8",
+      "demoUrl": "https://kkps.dev/engr-gp-8/",
+      "technologies": ["html", "css", "js"],
+      "screenshots": [
+        {
+          "src": "/projects/gallery/1.png",
+          "alt": "photo gallery — 1",
+          "sourceId": "archived-portfolio",
+          "width": 1988,
+          "height": 1080
+        },
+        {
+          "src": "/projects/gallery/2.png",
+          "alt": "photo gallery — 2",
+          "sourceId": "archived-portfolio",
+          "width": 1985,
+          "height": 1082
+        }
+      ]
+    }
+  ],
+  "education": [
+    {
+      "id": "university-of-the-pacific",
+      "sourceId": "cv-2026",
+      "institution": "University of The Pacific",
+      "location": "Stockton, California, United States",
+      "startDate": "2019-08",
+      "endDate": "2023-05",
+      "degree": "B.Sc. Computer Science",
+      "gpa": "3.80/4.00",
+      "honors": "magna cum laude",
+      "highlights": [
+        "Received Recognition of Excellence in Engineering Design in Bioengineering for Senior Project"
+      ]
+    }
+  ],
+  "skills": {
+    "sourceId": "cv-2026",
+    "items": [
+      "C#",
+      "TypeScript (TS)",
+      "JavaScript (JS)",
+      "SQL",
+      "HTML",
+      "CSS",
+      "ASP.NET/.NET",
+      "React",
+      "Node.js",
+      "Express",
+      "AWS (ECS, CloudFront, RDS, S3, SNS, SQS)",
+      "Azure",
+      "Microsoft SQL Server",
+      "SQLite",
+      "REST APIs",
+      "Git",
+      "GitHub Actions",
+      "CI/CD",
+      "Linux",
+      "Roslyn",
+      "TypeScript Compiler API",
+      "Visual Studio"
+    ]
+  }
+}

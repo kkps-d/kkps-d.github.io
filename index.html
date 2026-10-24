@@ -12,30 +12,43 @@
     />
     <link
       rel="preload"
-      href="/fonts/Inter-Italic-VariableFont_opsz,wght.ttf"
-      as="font"
-      type="font/ttf"
-      crossorigin
-    />
-    <link
-      rel="preload"
       href="/fonts/PlayfairDisplay-VariableFont_wght.ttf"
       as="font"
       type="font/ttf"
       crossorigin
     />
-    <link
-      rel="preload"
-      href="/fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf"
-      as="font"
-      type="font/ttf"
-      crossorigin
-    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta
       name="description"
-      content="A fresh React app built with Vite and wouter."
+      content="Full-stack software engineer with U.S. education and professional experience, holding a B.Sc. in Computer Science from the University of the Pacific."
     />
-    <title>kkps.dev</title>
+    <meta name="theme-color" content="#FAF6EC" />
+    <meta name="color-scheme" content="light dark" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Kaung Khant Pyae Sone | Software Engineer"
+    />
+    <meta
+      property="og:description"
+      content="Full-stack software engineer with U.S. education and professional experience, holding a B.Sc. in Computer Science from the University of the Pacific."
+    />
+    <title>Kaung Khant Pyae Sone | Software Engineer</title>
+    <script>
+      // Apply the theme before the page paints to avoid a flash on dark mode.
+      let theme
+      try {
+        theme = localStorage.getItem('portfolio-theme')
+      } catch {
+        // Fall back to the system preference when storage is unavailable.
+      }
+      document.documentElement.dataset.theme =
+        theme === 'light' || theme === 'dark'
+          ? theme
+          : window.matchMedia('(prefers-color-scheme: dark)').matches
+            ? 'dark'
+            : 'light'
+    </script>
   </head>
   <body>
     <div id="root"></div>
