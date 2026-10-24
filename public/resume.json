@@ -1,5 +1,6 @@
 {
   "schemaVersion": "1.0.0",
+  "footer": "kkps.dev @ 2026",
   "sources": [
     {
       "id": "cv-2026",
@@ -68,7 +69,7 @@
       "endDate": null,
       "current": true,
       "dateLabel": "April 2026 – Current",
-      "summary": "Redesigned the mobile experience of an existing HR system within my first 2 months",
+      "summary": "Delivered HR and recruitment applications, cloud infrastructure, and security analysis tools.",
       "highlights": [
         "Redesigned the mobile experience of an existing HR system within my first 2 months, creating role-oriented employee and manager dashboards around frequently used workflows and at-a-glance information, alongside mobile bottom-tab and navigation-stack-style navigation within the existing React SPA",
         "Designed and delivered a public-facing Job Portal from requirements to QA on a ~1-month timeline, using React and ASP.NET with ASP.NET Identity and SMS OTP authentication",
@@ -88,7 +89,7 @@
       "endDate": "2025-12",
       "current": false,
       "dateLabel": "Dec 2023 – Dec 2025",
-      "summary": "Held full ownership of the modern engineering content management system project and multiple internal PowerApps applications",
+      "summary": "Modernized an engineering CMS and built internal apps, improving search and processing performance.",
       "highlights": [
         "Held full ownership of the modern engineering content management system project and multiple internal PowerApps applications, working across requirements, implementation, testing, stakeholder coordination, deployment, and ongoing enhancements",
         "Modernized a legacy .NET engineering content management system used by 500+ users and 10+ API integrations into a Node.js/Express + React application with multi-tenant support while simplifying the architecture, preserving database and API compatibility and supporting PingFederate and Microsoft Entra authentication for apps and users across all APIs",
@@ -108,7 +109,7 @@
       "endDate": "2022-12",
       "current": false,
       "dateLabel": "May 2022 – Dec 2022",
-      "summary": "Developed a web dashboard used by 10+ support engineers and managers",
+      "summary": "Built an on-call availability dashboard for support teams using Salesforce data.",
       "highlights": [
         "Developed a web dashboard used by 10+ support engineers and managers that displays the availability of support engineers who are on-call using data from Salesforce"
       ]

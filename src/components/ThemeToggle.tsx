@@ -29,7 +29,12 @@ export function ThemeToggle() {
     document.documentElement.dataset.theme = theme
     document
       .querySelector('meta[name="theme-color"]')
-      ?.setAttribute('content', theme === 'dark' ? '#23211E' : '#FAF6EC')
+      ?.setAttribute(
+        'content',
+        document.documentElement.style.getPropertyValue(
+          `--${theme}-background`,
+        ) || (theme === 'dark' ? '#23211E' : '#FAF6EC'),
+      )
   }, [theme])
 
   function toggleTheme() {

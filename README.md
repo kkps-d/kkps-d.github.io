@@ -12,10 +12,11 @@ are served locally.
 The page loads it directly. Its TypeScript contract is in `src/types/resume.ts`.
 
 - `person`: name, role, location, relocation, contacts, summary, and CV download.
-- `experience`: stable IDs, dates, current status, summary excerpts, and full CV bullets.
+- `experience`: stable IDs, dates, current status, short rewritten summaries grounded in the CV, and full CV bullets.
 - `projects`: original names, descriptions, source references, repository/prototype links, technologies, and screenshot metadata.
 - `education`: institution, degree, dates, location, GPA, honors, and recognition, displayed after projects.
 - `skills`: retained from the CV for resume and retrieval consumers; not a separate page section.
+- `footer`: closing text displayed in the tall page footer.
 - `sources`: source paths and priority, with the current CV taking precedence over the archived portfolio. `sourceId` and `summarySourceId` identify provenance; project description paragraphs carry their own source IDs.
 
 Dates use `YYYY-MM`; a null experience end date means the role is current. A null
@@ -51,6 +52,14 @@ allows the final image to reach the same alignment. The sticky header spans the
 viewport while its contents align to the CV column.
 The theme follows the system preference until the visitor chooses a theme, which
 is remembered in browser storage. The original PDF is available from the header.
+
+The footer hammer reveals appearance controls for both themes and font pairings
+from `color.html`. Changes apply only to the current page and are not saved to
+browser storage. Reloading the page or choosing Reset appearance restores the
+default palette and fonts.
+The default Inter and Playfair Display files remain local. Other font families are
+requested from Google Fonts only after selecting a combination that uses them;
+they are not preloaded. Bierstadt uses the visitor's installed font or a fallback.
 
 ## Code quality
 

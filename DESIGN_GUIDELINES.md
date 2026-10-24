@@ -49,15 +49,20 @@ Preserve the weights and sample metrics from `color.html`:
 
 - Keep the page to the introduction, work experience, projects, and education, with a CV download and theme control in the sticky header.
 - Education follows projects and uses the institution, degree, dates, location, GPA, honors, and recognition from the CV JSON.
+- End with a tall, spacious footer containing the footer text from the content JSON.
+- Place a small hammer control beside the footer text to reveal local appearance settings: foreground/background pickers for each theme and the font combinations from `color.html`. Load additional fonts only when selected; keep the bundled fonts as the default. Include a reset to the original design.
+- Keep appearance controls temporary: do not read or write their settings in local storage; restore the default palette and font combination on reload.
 - Each role includes job title, company, location, dates, and a current-role indicator. Clicking its summary toggles the complete experience text; a chevron communicates the interaction.
 - Each project includes its original name, expandable description, a GitHub link when supplied, and screenshots from the archived portfolio. Use the original prototype link for projects without a repository.
 - Render content from `public/resume.json`. Preserve stable IDs, structured dates, and source references so the same data can support a resume generator or retrieval system.
-- Use the current CV verbatim where available. Use archived portfolio text for additional projects and details; take brief summaries from existing text instead of inventing new copy. The current CV takes precedence when sources overlap.
+- Preserve the full CV text and archived project descriptions. Work experience summaries are short, rewritten overviews grounded in the CV. The current CV takes precedence when sources overlap.
 
 ## Interaction and accessibility
 
 - Underline inline links. Provide clear hover, keyboard focus, and active states; do not rely on color alone.
 - Use a visible 2px foreground focus outline with an offset. Aim for at least 44px touch targets, including navigation and the theme toggle.
 - Keep transitions subtle, around 150–200ms. Respect reduced-motion preferences and avoid scroll-driven decoration.
+- Fade theme colors over 200ms, including the page, sticky header, text, dividers, and icons. Disable the fade when reduced motion is requested.
+- Animate the shared palette at the root so the header, chip text, and SVG fills inherit the same intermediate colors. Avoid independent transitions on every descendant, which can make inherited colors lag or flash.
 - Use semantic headings, keyboard-accessible controls, descriptive image alternatives, and a skip-to-content link.
 - Check both themes on narrow screens, with keyboard navigation, and at 200% zoom. Ensure muted text remains readable and content does not overlap or clip.

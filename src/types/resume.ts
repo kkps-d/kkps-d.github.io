@@ -1,5 +1,6 @@
 export interface Resume {
   schemaVersion: string
+  footer: string
   sources: {
     id: string
     type: string
