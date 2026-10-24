@@ -84,4 +84,11 @@ TypeScript 6 is used for compatibility with the TypeScript ESLint parser.
 
 `old/` contains the previous source, public assets, built site, configuration, and workflow as they existed before the reset. It is an archive and is not part of the new app's build.
 
-The GitHub Pages workflow is disabled by renaming it to `.github/workflows/static.yml.disabled`. Rename it back to a `.yml` file to re-enable it; update it to build the new app before deployment.
+The GitHub Pages workflow in `.github/workflows/static.yml` runs on pushes to
+`master` and can also be started manually. It uses Node.js 24, installs the locked
+dependencies with `npm ci`, builds the app, and deploys `dist/` to Pages.
+
+The archived SPA routing workaround is retained: `public/404.html` redirects
+unknown paths to the app, and the script in `index.html` restores the original
+path, query, and hash before React starts. The redirect keeps zero path segments
+because this is a user Pages site served at the domain root.

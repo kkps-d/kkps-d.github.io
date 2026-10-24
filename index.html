@@ -35,6 +35,25 @@
     />
     <title>Kaung Khant Pyae Sone | Software Engineer</title>
     <script>
+      // Single Page Apps for GitHub Pages — MIT License
+      // https://github.com/rafgraph/spa-github-pages
+      // Restore the route encoded by 404.html without another page request.
+      ;(function (location) {
+        if (location.search[1] === '/') {
+          const decoded = location.search
+            .slice(1)
+            .split('&')
+            .map((part) => part.replace(/~and~/g, '&'))
+            .join('?')
+          window.history.replaceState(
+            null,
+            '',
+            location.pathname.slice(0, -1) + decoded + location.hash,
+          )
+        }
+      })(window.location)
+    </script>
+    <script>
       // Apply the theme before the page paints to avoid a flash on dark mode.
       let theme
       try {
