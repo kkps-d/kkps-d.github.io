@@ -1,0 +1,43 @@
+.contactIcon {
+  display: block;
+  flex-shrink: 0;
+}
+.email,
+.linkedin,
+.whatsapp,
+.github {
+  transition: color 200ms ease;
+}
+.flagIcon {
+  border-radius: 2px;
+  filter: saturate(0.5);
+  opacity: 0.8;
+}
+.relocationIcon circle {
+  fill: var(--background);
+  stroke: none;
+}
+.email {
+  color: #b86d4c;
+}
+.linkedin {
+  color: #567e9d;
+}
+.whatsapp {
+  color: #548b68;
+}
+.github {
+  color: #777874;
+}
+:global(:root[data-theme='dark']) .email {
+  color: #cc987a;
+}
+:global(:root[data-theme='dark']) .linkedin {
+  color: #81a4bd;
+}
+:global(:root[data-theme='dark']) .whatsapp {
+  color: #7fa98a;
+}
+:global(:root[data-theme='dark']) .github {
+  color: #a6a7a2;
+}

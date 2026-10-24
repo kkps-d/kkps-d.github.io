@@ -1,3 +1,4 @@
+import styles from './ProjectGallery.module.css'
 import { useEffect, useRef, useState } from 'react'
 import type { Resume } from '../types/resume'
 import { Chevron } from './Chevron'
@@ -77,12 +78,12 @@ export function ProjectGallery({
   }
 
   return (
-    <div className="project-gallery">
-      <div className="gallery-toolbar">
-        <div className="project-links">
+    <div>
+      <div className={styles.galleryToolbar}>
+        <div className={styles.projectLinks}>
           {project.githubUrl && (
             <a
-              className="link-chip"
+              className={styles.linkChip}
               href={project.githubUrl}
               target="_blank"
               rel="noreferrer"
@@ -93,7 +94,7 @@ export function ProjectGallery({
           )}
           {!project.githubUrl && project.demoUrl && (
             <a
-              className="link-chip"
+              className={styles.linkChip}
               href={project.demoUrl}
               target="_blank"
               rel="noreferrer"
@@ -103,7 +104,7 @@ export function ProjectGallery({
           )}
         </div>
         <div
-          className="gallery-controls"
+          className={styles.galleryControls}
           role="group"
           aria-label={`${project.name} screenshots`}
         >
@@ -114,7 +115,7 @@ export function ProjectGallery({
             aria-label={`${project.name}: previous screenshots`}
             aria-controls={`${project.id}-screenshots`}
           >
-            <Chevron className="chevron-left" />
+            <Chevron className={styles.chevronLeft} />
           </button>
           <button
             type="button"
@@ -123,12 +124,12 @@ export function ProjectGallery({
             aria-label={`${project.name}: next screenshots`}
             aria-controls={`${project.id}-screenshots`}
           >
-            <Chevron className="chevron-right" />
+            <Chevron className={styles.chevronRight} />
           </button>
         </div>
       </div>
       <div
-        className="gallery-track"
+        className={styles.galleryTrack}
         id={`${project.id}-screenshots`}
         ref={trackRef}
         role="region"
@@ -137,7 +138,7 @@ export function ProjectGallery({
         tabIndex={0}
       >
         {project.screenshots.map((image) => (
-          <figure className="gallery-slide" key={image.src}>
+          <figure className={styles.gallerySlide} key={image.src}>
             <a href={image.src} target="_blank" rel="noreferrer">
               <img
                 src={image.src}

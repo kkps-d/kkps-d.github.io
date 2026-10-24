@@ -1,3 +1,4 @@
+import styles from './AppearanceControls.module.css'
 import { useEffect, useRef, useState } from 'react'
 import { Hammer } from 'lucide-react'
 
@@ -95,9 +96,9 @@ function ColorControl({
   }
 
   return (
-    <div className="appearance-color">
+    <div className={styles.appearanceColor}>
       <span>{label}</span>
-      <div className="appearance-picker">
+      <div className={styles.appearancePicker}>
         <input
           type="color"
           aria-label={`${label} color`}
@@ -205,7 +206,7 @@ export function AppearanceControls() {
       <button
         ref={buttonRef}
         type="button"
-        className="appearance-toggle"
+        className={styles.appearanceToggle}
         aria-label="Customize appearance"
         title="Customize appearance"
         aria-expanded={open}
@@ -216,7 +217,7 @@ export function AppearanceControls() {
       </button>
       {open && (
         <section
-          className="appearance-panel"
+          className={styles.appearancePanel}
           id="appearance-panel"
           aria-label="Appearance controls"
           onKeyDown={(event) => {
@@ -226,7 +227,7 @@ export function AppearanceControls() {
             }
           }}
         >
-          <div className="appearance-palettes">
+          <div className={styles.appearancePalettes}>
             {(['light', 'dark'] as const).map((mode) => (
               <fieldset key={`${mode}-${resetCount}`}>
                 <legend>{mode === 'light' ? 'Light mode' : 'Dark mode'}</legend>
@@ -243,7 +244,7 @@ export function AppearanceControls() {
               </fieldset>
             ))}
           </div>
-          <label className="appearance-fonts">
+          <label className={styles.appearanceFonts}>
             Heading / body fonts
             <select
               value={appearance.fontPair}
@@ -274,7 +275,7 @@ export function AppearanceControls() {
           )}
           <button
             type="button"
-            className="appearance-reset"
+            className={styles.appearanceReset}
             onClick={() => {
               setAppearance(defaults)
               setResetCount((count) => count + 1)

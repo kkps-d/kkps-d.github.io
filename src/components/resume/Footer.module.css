@@ -1,0 +1,19 @@
+.siteFooter {
+  display: grid;
+  place-items: center;
+  width: min(210mm, calc(100% - 48px));
+  min-height: max(280px, 40svh);
+  margin: 0 auto;
+  padding: 64px 24px;
+  border-top: 1px solid var(--section-divider);
+  color: var(--muted);
+  font-size: 14px;
+}
+.footerSignoff {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+}

@@ -1,0 +1,98 @@
+.galleryToolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 12px 0;
+}
+.projectLinks {
+  display: flex;
+  gap: 12px;
+}
+.linkChip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 4px 12px;
+  border: 1px solid var(--divider);
+  border-radius: 4px;
+  font-size: 13px;
+  text-decoration: none;
+}
+.linkChip:hover {
+  border-color: var(--foreground);
+}
+.galleryControls {
+  display: flex;
+  gap: 4px;
+}
+.galleryControls button {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  cursor: pointer;
+}
+.galleryControls button:disabled {
+  opacity: 0.25;
+  cursor: default;
+}
+.galleryControls button:not(:disabled):hover {
+  background: var(--divider);
+}
+.galleryControls svg {
+  margin: 0;
+}
+.chevronLeft {
+  transform: rotate(90deg);
+}
+.chevronRight {
+  transform: rotate(-90deg);
+}
+/* Full-width scrolling, with the first screenshot aligned to the CV column. */
+.galleryTrack {
+  display: flex;
+  gap: 16px;
+  width: 100cqw;
+  padding: 4px 24px 12px var(--content-inset);
+  margin-left: calc(50% - 50cqw);
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scroll-padding-left: var(--content-inset);
+  scrollbar-width: none;
+}
+.galleryTrack::-webkit-scrollbar {
+  display: none;
+}
+.gallerySlide {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+}
+.gallerySlide:last-child {
+  /* Leave enough trailing space to align even a narrow final image. */
+  min-width: calc(100cqw - var(--content-inset) - 24px);
+}
+.gallerySlide a {
+  display: block;
+  width: fit-content;
+}
+.gallerySlide img {
+  display: block;
+  width: auto;
+  height: 260px;
+  max-width: none;
+  border: 1px solid var(--divider);
+  border-radius: 4px;
+}
+
+@media (width <= 600px) {
+  .gallerySlide img {
+    height: 200px;
+  }
+}

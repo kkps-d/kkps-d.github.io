@@ -1,0 +1,24 @@
+.disclosure {
+  margin-top: 12px;
+}
+.disclosure summary {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: 44px;
+  padding: 4px 0;
+  list-style: none;
+  cursor: pointer;
+}
+.disclosure summary::-webkit-details-marker {
+  display: none;
+}
+.disclosure summary:hover > span {
+  text-decoration: underline;
+  text-decoration-color: var(--divider);
+  text-underline-offset: 4px;
+}
+.disclosure[open] > summary svg {
+  transform: rotate(180deg);
+}

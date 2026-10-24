@@ -1,7 +1,9 @@
+import styles from './Chevron.module.css'
+
 export function Chevron({ className = '' }: { className?: string }) {
   return (
     <svg
-      className={`chevron ${className}`}
+      className={`${styles.chevron} ${className}`}
       width="18"
       height="18"
       viewBox="0 0 24 24"

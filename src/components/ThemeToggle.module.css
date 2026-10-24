@@ -1,0 +1,14 @@
+.themeToggle {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  cursor: pointer;
+}
+.themeToggle:hover {
+  background: var(--divider);
+}

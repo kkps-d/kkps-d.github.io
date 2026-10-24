@@ -1,6 +1,6 @@
 # Kaung Khant Pyae Sone — Portfolio
 
-A compact, interactive CV built with React, TypeScript, Vite, and plain CSS.
+A compact, interactive CV built with React, TypeScript, Vite, and CSS modules.
 The text column has an A4 maximum width, with sticky section navigation,
 expandable descriptions, and project screenshot carousels that span the viewport,
 with their first screenshot aligned to the text column. Inter and Playfair Display
@@ -43,6 +43,12 @@ npm run preview
 ```
 
 `npm run build` checks TypeScript before bundling. Run `npm run typecheck` to check types without building. App source lives in `src/App.tsx`, with the entry point in `src/main.tsx`.
+
+`src/pages/Home.tsx` loads the content and composes the introduction, sticky
+navigation, work experience, projects, education, and footer components in
+`src/components/resume/`. Section dividers and expandable descriptions share
+small components. Component styles live in colocated CSS modules; `src/index.css`
+contains the shared theme, base typography, resets, and accessibility rules.
 
 Navigation uses native section anchors (`#experience`, `#projects`, and `#education`). The active
 underline follows the visible section. Descriptions use native `details` elements;

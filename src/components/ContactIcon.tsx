@@ -1,10 +1,11 @@
+import styles from './ContactIcon.module.css'
 import { MapPin } from 'lucide-react'
 
 export function ContactIcon({ name }: { name: string }) {
   if (name === 'relocation') {
     return (
       <MapPin
-        className="contact-icon relocation-icon"
+        className={`${styles.contactIcon} ${styles.relocationIcon}`}
         size={16}
         strokeWidth={1.5}
         fill="currentColor"
@@ -16,7 +17,7 @@ export function ContactIcon({ name }: { name: string }) {
   if (name === 'us') {
     return (
       <svg
-        className="contact-icon flag-icon"
+        className={`${styles.contactIcon} ${styles.flagIcon}`}
         width="20"
         height="14"
         viewBox="0 0 30 20"
@@ -51,7 +52,7 @@ export function ContactIcon({ name }: { name: string }) {
   if (name === 'myanmar') {
     return (
       <svg
-        className="contact-icon flag-icon"
+        className={`${styles.contactIcon} ${styles.flagIcon}`}
         width="20"
         height="14"
         viewBox="0 0 30 20"
@@ -70,7 +71,7 @@ export function ContactIcon({ name }: { name: string }) {
 
   return (
     <svg
-      className={`contact-icon contact-icon-${name}`}
+      className={`${styles.contactIcon} ${styles[name] ?? ''}`}
       width="16"
       height="16"
       viewBox="0 0 24 24"

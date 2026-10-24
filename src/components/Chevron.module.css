@@ -1,0 +1,5 @@
+.chevron {
+  flex-shrink: 0;
+  margin-top: 5px;
+  transition: transform 150ms;
+}

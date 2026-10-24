@@ -1,0 +1,15 @@
+.educationSection {
+  padding-bottom: 64px;
+}
+.educationItem + .educationItem {
+  margin-top: 32px;
+}
+.educationHonors {
+  margin-top: 16px;
+}
+
+.location {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}

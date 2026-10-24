@@ -1,0 +1,112 @@
+.appearanceToggle {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  cursor: pointer;
+}
+.appearanceToggle:hover,
+.appearanceToggle[aria-expanded='true'] {
+  background: var(--divider);
+}
+.appearancePanel {
+  flex-basis: 100%;
+  min-width: 0;
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--divider);
+  color: var(--foreground);
+  text-align: left;
+  font-size: 13px;
+}
+.appearancePalettes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+.appearancePalettes fieldset {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.appearancePalettes legend {
+  margin-bottom: 16px;
+  padding: 0;
+}
+.appearanceColor + .appearanceColor {
+  margin-top: 16px;
+}
+.appearanceColor > span {
+  color: var(--muted);
+}
+.appearancePicker {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.appearancePicker input {
+  min-height: 44px;
+  color: inherit;
+  background: transparent;
+  font: inherit;
+}
+.appearancePicker input[type='color'] {
+  width: 44px;
+  padding: 8px 0;
+  border: 0;
+  cursor: pointer;
+}
+.appearancePicker input[type='text'] {
+  width: 9ch;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  border-bottom: 1px solid var(--divider);
+  border-radius: 0;
+}
+.appearancePicker input[aria-invalid='true'] {
+  outline: 1px solid currentColor;
+}
+.appearanceColor small {
+  display: block;
+  margin-top: 4px;
+}
+.appearanceFonts {
+  display: grid;
+  gap: 8px;
+  margin-top: 24px;
+}
+.appearanceFonts select {
+  width: 100%;
+  min-height: 44px;
+  padding: 4px 0;
+  border: 0;
+  border-bottom: 1px solid var(--divider);
+  border-radius: 0;
+  color: inherit;
+  background: var(--background);
+  font: inherit;
+}
+.appearanceReset {
+  min-height: 44px;
+  margin-top: 16px;
+  padding: 0;
+  border: 0;
+  color: inherit;
+  background: transparent;
+  font: inherit;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  cursor: pointer;
+}
+
+@media (width <= 400px) {
+  .appearancePalettes {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

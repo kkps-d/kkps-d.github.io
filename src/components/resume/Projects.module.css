@@ -1,0 +1,13 @@
+.projectDescription {
+  margin-top: 16px;
+}
+.projectDescription p + p {
+  margin-top: 16px;
+}
+.projectItem {
+  margin-bottom: 48px;
+}
+.projectItem + .projectItem {
+  padding-top: 32px;
+  border-top: 1px solid var(--divider);
+}

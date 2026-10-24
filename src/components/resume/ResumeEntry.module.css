@@ -1,0 +1,32 @@
+.itemHeading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px 24px;
+}
+.dateRange,
+.itemLocation {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+.dateRange {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+.jobCompany {
+  margin-top: 4px;
+}
+.itemLocation {
+  margin-top: 2px;
+}
+.experienceText {
+  margin: 16px 0 0;
+  padding-left: 20px;
+}
+.experienceText li + li {
+  margin-top: 12px;
+}

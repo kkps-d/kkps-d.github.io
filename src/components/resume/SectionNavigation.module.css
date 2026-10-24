@@ -1,0 +1,76 @@
+.sectionHeader {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 64px;
+  width: 100cqw;
+  margin-left: calc(50% - 50cqw);
+  padding: 0 var(--content-inset);
+  border-bottom: 1px solid var(--divider);
+  background: var(--background);
+}
+.sectionHeader nav {
+  display: flex;
+  align-items: stretch;
+  align-self: stretch;
+  gap: 32px;
+  font-size: 14px;
+}
+.sectionHeader nav a {
+  display: flex;
+  align-items: center;
+  min-height: 64px;
+  border-bottom: 1px solid transparent;
+  text-decoration: none;
+}
+.sectionHeader nav a[aria-current] {
+  border-color: var(--foreground);
+}
+.sectionHeader nav a:hover {
+  text-decoration: underline;
+}
+.headerTools {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.cvDownload {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  font-size: 13px;
+  text-decoration: none;
+}
+.cvDownload:hover {
+  text-decoration: underline;
+}
+
+@media (width <= 600px) {
+  .sectionHeader {
+    gap: 8px;
+  }
+  .sectionHeader nav {
+    flex-wrap: wrap;
+    gap: 0 12px;
+    font-size: 13px;
+  }
+  .sectionHeader nav a {
+    min-height: 44px;
+  }
+  .headerTools {
+    gap: 4px;
+  }
+  .cvDownload {
+    justify-content: center;
+    width: 44px;
+  }
+  .cvDownloadLabel {
+    display: none;
+  }
+}

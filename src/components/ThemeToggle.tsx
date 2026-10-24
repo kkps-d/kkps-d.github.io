@@ -1,3 +1,4 @@
+import styles from './ThemeToggle.module.css'
 import { useEffect, useState } from 'react'
 
 type Theme = 'light' | 'dark'
@@ -49,7 +50,7 @@ export function ThemeToggle() {
 
   return (
     <button
-      className="theme-toggle"
+      className={styles.themeToggle}
       type="button"
       onClick={toggleTheme}
       aria-label="Dark mode"
