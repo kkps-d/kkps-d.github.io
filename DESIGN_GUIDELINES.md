@@ -43,7 +43,8 @@ Preserve the weights and sample metrics from `color.html`:
 - Hide carousel scrollbars while retaining touch, trackpad, and keyboard scrolling. Arrows step between images, aligning each image's left edge with the text column. Include enough trailing space for the last image to reach that alignment.
 - Preserve arrow inputs during scrolling animations: each click advances the requested destination. Direct touch, trackpad, or keyboard scrolling takes control from the pending animation target.
 - Prefer open sections and thin dividers. Use cards only when grouping content needs a visible boundary; keep corners subtle, around 4px, and avoid decorative shadows.
-- Begin work experience, projects, and education with an A4-column-width 1px rule at 25% foreground opacity, with 48px above the rule and 24px between the rule and heading. Keep item dividers lighter at 16%.
+- Begin projects and education with an A4-column-width 1px rule at 25% foreground opacity, with 48px above the rule and 24px between the rule and heading. Keep item dividers lighter at 16%.
+- Omit the rule above work experience while preserving the original spacing: 72px between the sticky header and heading.
 
 ## Content and components
 
@@ -62,6 +63,7 @@ Preserve the weights and sample metrics from `color.html`:
 - Underline inline links. Provide clear hover, keyboard focus, and active states; do not rely on color alone.
 - Use a visible 2px foreground focus outline with an offset. Aim for at least 44px touch targets, including navigation and the theme toggle.
 - Keep transitions subtle, around 150–200ms. Respect reduced-motion preferences and avoid scroll-driven decoration.
+- Theme clicks briefly show a small, absolutely positioned countdown from 5 to 0 without moving the header. Six clicks within successive 3-second windows reveal a muted RGB background wave; another click stops it. Keep this temporary and disable its motion when reduced motion is requested.
 - Fade theme colors over 200ms, including the page, sticky header, text, dividers, and icons. Disable the fade when reduced motion is requested.
 - Animate the shared palette at the root so the header, chip text, and SVG fills inherit the same intermediate colors. Avoid independent transitions on every descendant, which can make inherited colors lag or flash.
 - Use semantic headings, keyboard-accessible controls, descriptive image alternatives, and a skip-to-content link.
