@@ -18,6 +18,12 @@ export function Projects({ projects }: { projects: Resume['projects'] }) {
             <h3>{project.name}</h3>
             {project.year && <p className={entry.dateRange}>{project.year}</p>}
           </div>
+          {project.technologies.length > 0 && (
+            <p className={styles.technologies}>
+              <span className="sr-only">Technologies: </span>
+              {project.technologies.join(' · ')}
+            </p>
+          )}
           <ExpandableText summary={project.summary}>
             <div className={styles.projectDescription}>
               {project.description.map((paragraph) => (

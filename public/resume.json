@@ -139,31 +139,31 @@
       ],
       "githubUrl": "https://github.com/kkps-d/gradiotronics",
       "demoUrl": "https://www.kkps.dev/gradiotronics/",
-      "technologies": ["c++", "html", "css", "js", "arduino"],
+      "technologies": ["C++", "HTML", "CSS", "JavaScript", "Arduino"],
       "screenshots": [
         {
-          "src": "/projects/gradiotronics/web-app.png",
+          "src": "/projects/gradiotronics/web-app.webp",
           "alt": "Gradiotronics — web app",
           "sourceId": "archived-portfolio",
           "width": 444,
           "height": 302
         },
         {
-          "src": "/projects/gradiotronics/hardware-assembly.png",
+          "src": "/projects/gradiotronics/hardware-assembly.webp",
           "alt": "Gradiotronics — hardware assembly",
           "sourceId": "archived-portfolio",
           "width": 578,
           "height": 562
         },
         {
-          "src": "/projects/gradiotronics/prototype-top.png",
+          "src": "/projects/gradiotronics/prototype-top.webp",
           "alt": "Gradiotronics — prototype top",
           "sourceId": "archived-portfolio",
           "width": 845,
           "height": 475
         },
         {
-          "src": "/projects/gradiotronics/prototype-bottom.png",
+          "src": "/projects/gradiotronics/prototype-bottom.webp",
           "alt": "Gradiotronics — prototype bottom",
           "sourceId": "archived-portfolio",
           "width": 900,
@@ -197,10 +197,10 @@
       ],
       "githubUrl": "https://github.com/kkps-d/button-board-win32-helper/",
       "demoUrl": null,
-      "technologies": ["c#", "html", "css", "js", "node"],
+      "technologies": ["C#", "HTML", "CSS", "JavaScript", "Node.js"],
       "screenshots": [
         {
-          "src": "/projects/button-board-helper/card.png",
+          "src": "/projects/button-board-helper/card.webp",
           "alt": "Button Board Windows Helper — card",
           "sourceId": "archived-portfolio",
           "width": 1122,
@@ -227,10 +227,10 @@
       ],
       "githubUrl": "https://github.com/kkps-d/kkps-d.github.io",
       "demoUrl": null,
-      "technologies": ["html", "css", "js", "react"],
+      "technologies": ["HTML", "CSS", "JavaScript", "React"],
       "screenshots": [
         {
-          "src": "/projects/personal-website/picture1.png",
+          "src": "/projects/personal-website/picture1.webp",
           "alt": "Personal Website — picture1",
           "sourceId": "archived-portfolio",
           "width": 508,
@@ -257,24 +257,24 @@
       ],
       "githubUrl": "https://github.com/kkps-d/uop-classwork-repository/tree/main/comp-129-software-engineering/typing-tester",
       "demoUrl": "https://replit.com/@kkps-d/typing-tester",
-      "technologies": ["python", "pytest", "pygame"],
+      "technologies": ["Python", "pytest", "Pygame"],
       "screenshots": [
         {
-          "src": "/projects/typing-game/main-menu.png",
+          "src": "/projects/typing-game/main-menu.webp",
           "alt": "Typing Tester — main menu",
           "sourceId": "archived-portfolio",
           "width": 1867,
           "height": 997
         },
         {
-          "src": "/projects/typing-game/typing-test.png",
+          "src": "/projects/typing-game/typing-test.webp",
           "alt": "Typing Tester — typing test",
           "sourceId": "archived-portfolio",
           "width": 1869,
           "height": 997
         },
         {
-          "src": "/projects/typing-game/statistics.png",
+          "src": "/projects/typing-game/statistics.webp",
           "alt": "Typing Tester — statistics",
           "sourceId": "archived-portfolio",
           "width": 1868,
@@ -301,38 +301,38 @@
       ],
       "githubUrl": null,
       "demoUrl": "https://www.figma.com/proto/2u5BolbjmlhcVWZAukkZev/Final-prototype?page-id=0%3A1&type=design&node-id=231-2&viewport=1701%2C-354%2C0.22&t=up6zbOScm7vhVc5Z-1&scaling=scale-down&starting-point-node-id=231%3A2&show-proto-sidebar=1&mode=design",
-      "technologies": ["figma"],
+      "technologies": ["Figma"],
       "screenshots": [
         {
-          "src": "/projects/time-app/1.png",
+          "src": "/projects/time-app/1.webp",
           "alt": "Time Management App — 1",
           "sourceId": "archived-portfolio",
           "width": 1286,
           "height": 837
         },
         {
-          "src": "/projects/time-app/2.png",
+          "src": "/projects/time-app/2.webp",
           "alt": "Time Management App — 2",
           "sourceId": "archived-portfolio",
           "width": 1282,
           "height": 834
         },
         {
-          "src": "/projects/time-app/3.png",
+          "src": "/projects/time-app/3.webp",
           "alt": "Time Management App — 3",
           "sourceId": "archived-portfolio",
           "width": 1282,
           "height": 833
         },
         {
-          "src": "/projects/time-app/4.png",
+          "src": "/projects/time-app/4.webp",
           "alt": "Time Management App — 4",
           "sourceId": "archived-portfolio",
           "width": 1282,
           "height": 834
         },
         {
-          "src": "/projects/time-app/5.png",
+          "src": "/projects/time-app/5.webp",
           "alt": "Time Management App — 5",
           "sourceId": "archived-portfolio",
           "width": 1282,
@@ -355,10 +355,10 @@
       ],
       "githubUrl": "https://github.com/kkps-d/uop-classwork-repository/tree/main/comp-141-programming-languages",
       "demoUrl": "https://replit.com/@kkps-d/expression-evaluator#Readme.md",
-      "technologies": ["python"],
+      "technologies": ["Python"],
       "screenshots": [
         {
-          "src": "/projects/exp-eval/1.png",
+          "src": "/projects/exp-eval/1.webp",
           "alt": "Expression Evaluator — 1",
           "sourceId": "archived-portfolio",
           "width": 558,
@@ -381,10 +381,10 @@
       ],
       "githubUrl": "https://github.com/kkps-d/closest-pair-finder",
       "demoUrl": "https://www.kkps.dev/closest-pair-finder/",
-      "technologies": ["html", "css", "js"],
+      "technologies": ["HTML", "CSS", "JavaScript"],
       "screenshots": [
         {
-          "src": "/projects/pair-finder/1.png",
+          "src": "/projects/pair-finder/1.webp",
           "alt": "Closest Pair Finder — 1",
           "sourceId": "archived-portfolio",
           "width": 709,
@@ -411,31 +411,31 @@
       ],
       "githubUrl": "https://github.com/kkps-d/dbot",
       "demoUrl": null,
-      "technologies": ["html", "css", "js", "node"],
+      "technologies": ["HTML", "CSS", "JavaScript", "Node.js"],
       "screenshots": [
         {
-          "src": "/projects/discord-bot/1.png",
+          "src": "/projects/discord-bot/1.webp",
           "alt": "Discord Bot — 1",
           "sourceId": "archived-portfolio",
           "width": 994,
           "height": 640
         },
         {
-          "src": "/projects/discord-bot/2.png",
+          "src": "/projects/discord-bot/2.webp",
           "alt": "Discord Bot — 2",
           "sourceId": "archived-portfolio",
           "width": 994,
           "height": 640
         },
         {
-          "src": "/projects/discord-bot/3.png",
+          "src": "/projects/discord-bot/3.webp",
           "alt": "Discord Bot — 3",
           "sourceId": "archived-portfolio",
           "width": 977,
           "height": 638
         },
         {
-          "src": "/projects/discord-bot/4.png",
+          "src": "/projects/discord-bot/4.webp",
           "alt": "Discord Bot — 4",
           "sourceId": "archived-portfolio",
           "width": 993,
@@ -458,10 +458,10 @@
       ],
       "githubUrl": "https://github.com/kkps-d/uop-classwork-repository/tree/main/ecpe-170-computer-systems-and-networking/lab12",
       "demoUrl": "https://replit.com/@kkps-d/hangman",
-      "technologies": ["mips"],
+      "technologies": ["MIPS"],
       "screenshots": [
         {
-          "src": "/projects/hangman/1.png",
+          "src": "/projects/hangman/1.webp",
           "alt": "Hangman — 1",
           "sourceId": "archived-portfolio",
           "width": 414,
@@ -484,10 +484,17 @@
       ],
       "githubUrl": "https://github.com/kkps-d/Home32-Server",
       "demoUrl": null,
-      "technologies": ["c++", "html", "css", "js", "node", "arduino"],
+      "technologies": [
+        "C++",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Node.js",
+        "Arduino"
+      ],
       "screenshots": [
         {
-          "src": "/projects/wifi-light/card.png",
+          "src": "/projects/wifi-light/card.webp",
           "alt": "Wi-Fi LED strip — card",
           "sourceId": "archived-portfolio",
           "width": 310,
@@ -510,17 +517,17 @@
       ],
       "githubUrl": "https://github.com/kkps-d/engr-gp-8",
       "demoUrl": "https://kkps.dev/engr-gp-8/",
-      "technologies": ["html", "css", "js"],
+      "technologies": ["HTML", "CSS", "JavaScript"],
       "screenshots": [
         {
-          "src": "/projects/gallery/1.png",
+          "src": "/projects/gallery/1.webp",
           "alt": "photo gallery — 1",
           "sourceId": "archived-portfolio",
           "width": 1988,
           "height": 1080
         },
         {
-          "src": "/projects/gallery/2.png",
+          "src": "/projects/gallery/2.webp",
           "alt": "photo gallery — 2",
           "sourceId": "archived-portfolio",
           "width": 1985,

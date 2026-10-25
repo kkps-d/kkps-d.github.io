@@ -4,7 +4,7 @@ A compact, interactive CV built with React, TypeScript, Vite, and CSS modules.
 The text column has an A4 maximum width, with sticky section navigation,
 expandable descriptions, and project screenshot carousels that span the viewport,
 with their first screenshot aligned to the text column. Inter and Playfair Display
-are served locally.
+are served locally as WOFF2 variable fonts.
 
 ## Content
 
@@ -22,11 +22,31 @@ The page loads it directly. Its TypeScript contract is in `src/types/resume.ts`.
 Dates use `YYYY-MM`; a null experience end date means the role is current. A null
 project year means the archive did not provide a calendar year. Project text is
 historical unless superseded by the current CV. `schemaVersion` versions the
-content contract. Screenshot files are copied unchanged from `old/public/img/`
-into `public/projects/`, leaving the archive intact.
+content contract. Screenshots in `public/projects/` are converted from
+`old/public/img/` to lossless WebP when smaller; the JPEG is retained because
+lossless WebP would increase its size. Dimensions and decoded pixels are
+unchanged, and the archive remains intact.
 
 Edit the JSON to update the CV without editing components. Design decisions are
 documented in `DESIGN_GUIDELINES.md`.
+
+## Search metadata and assets
+
+The preferred URL is `https://www.kkps.dev/`, matching the existing GitHub Pages
+redirect destination and declared by the canonical link and
+Open Graph URL in `index.html` and the Pages domain file in `public/CNAME`.
+The custom domain and redirects also need to be configured in GitHub Pages
+settings and DNS. Update the title and descriptions in `index.html` when the
+profile changes.
+
+`Home.tsx` generates `ProfilePage` / `Person` JSON-LD from the loaded resume,
+including the name, role, summary, education, and GitHub and LinkedIn profiles.
+The introduction uses a single H1 containing the name and role, and projects
+display their technologies as text.
+
+Fonts and screenshots are optimized once and checked in. WOFF2 retains all
+font glyphs, styles, and variable axes. No asset conversion runs during the
+build, and no conversion dependencies are required to develop or deploy.
 
 ## Development
 

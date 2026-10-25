@@ -37,7 +37,7 @@ Preserve the weights and sample metrics from `color.html`:
 - Center the text column horizontally with an A4 maximum width of 210mm and at least 24px side gutters on narrow screens. Avoid a paper frame or shadow.
 - Use a spacing scale of 4, 8, 12, 16, 24, 32, 48, 64, and 96px. Keep related details close; separate sections by 64–96px on desktop and 48–64px on mobile.
 - Use a single text column. Place dates beside item headings where space permits, and wrap them below on narrow screens.
-- Start with the name as H2, job title as H1, dot-separated location and contact chips, then the CV summary. Center this content vertically in the initial viewport; let it grow naturally on short screens.
+- Start with one H1 containing the name at section-heading size and the job title at main-heading size, followed by dot-separated location and contact chips, then the CV summary. Center this content vertically in the initial viewport; let it grow naturally on short screens.
 - Follow the introduction with sticky section navigation. Its background and divider span the viewport; its links and controls align to the text column. Underline the section currently being viewed and update it during scrolling and disclosure expansion.
 - Project screenshot tracks span the viewport in both directions, with the first screenshot initially aligned to the text column. Keep horizontal scrolling inside each track, preserve image proportions, and offer previous/next controls without autoplay.
 - Hide carousel scrollbars while retaining touch, trackpad, and keyboard scrolling. Arrows step between images, aligning each image's left edge with the text column. Include enough trailing space for the last image to reach that alignment.
@@ -54,7 +54,7 @@ Preserve the weights and sample metrics from `color.html`:
 - Place a small hammer control beside the footer text to reveal local appearance settings: foreground/background pickers for each theme and the font combinations from `color.html`. Load additional fonts only when selected; keep the bundled fonts as the default. Include a reset to the original design.
 - Keep appearance controls temporary: do not read or write their settings in local storage; restore the default palette and font combination on reload.
 - Each role includes job title, company, location, dates, and a current-role indicator. Clicking its summary toggles the complete experience text; a chevron communicates the interaction.
-- Each project includes its original name, expandable description, a GitHub link when supplied, and screenshots from the archived portfolio. Use the original prototype link for projects without a repository.
+- Each project includes its original name, technologies, expandable description, a GitHub link when supplied, and screenshots from the archived portfolio. Use the original prototype link for projects without a repository.
 - Render content from `public/resume.json`. Preserve stable IDs, structured dates, and source references so the same data can support a resume generator or retrieval system.
 - Preserve the full CV text and archived project descriptions. Work experience summaries are short, rewritten overviews grounded in the CV. The current CV takes precedence when sources overlap.
 

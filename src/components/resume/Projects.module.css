@@ -1,3 +1,9 @@
+.technologies {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
 .projectDescription {
   margin-top: 16px;
 }

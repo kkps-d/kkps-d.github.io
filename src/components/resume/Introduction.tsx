@@ -6,8 +6,10 @@ export function Introduction({ person }: { person: Resume['person'] }) {
   return (
     <section className={styles.introduction} aria-labelledby="name">
       <div>
-        <h2 id="name">{person.name}</h2>
-        <h1>{person.title}</h1>
+        <h1 id="name">
+          <span className={styles.name}>{person.name}</span>{' '}
+          <span className={styles.title}>{person.title}</span>
+        </h1>
         <ul
           className={styles.contactChips}
           aria-label="Location and contact information"
