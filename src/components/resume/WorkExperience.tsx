@@ -10,7 +10,11 @@ export function WorkExperience({
   experience: Resume['experience']
 }) {
   return (
-    <ResumeSection id="experience" title="Work experience">
+    <ResumeSection
+      id="experience"
+      title="Work experience"
+      className={styles.workExperience}
+    >
       {experience.map((job) => (
         <article className={styles.experienceItem} key={job.id} id={job.id}>
           <div className={entry.itemHeading}>

@@ -1,3 +1,9 @@
+.workExperience {
+  padding-top: 72px;
+}
+.workExperience::before {
+  display: none;
+}
 .experienceItem {
   margin-bottom: 32px;
 }
