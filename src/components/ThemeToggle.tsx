@@ -1,25 +1,39 @@
 import styles from './ThemeToggle.module.css'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useSyncExternalStore } from 'react'
 import { createPortal } from 'react-dom'
 
 type Theme = 'light' | 'dark'
+
+function subscribeToTheme(onChange: () => void) {
+  const media = window.matchMedia('(prefers-color-scheme: dark)')
+  media.addEventListener('change', onChange)
+  return () => media.removeEventListener('change', onChange)
+}
+
+function readTheme(): Theme {
+  try {
+    const saved = localStorage.getItem('portfolio-theme')
+    if (saved === 'light' || saved === 'dark') return saved
+  } catch {
+    // Fall back to the system preference when storage is unavailable.
+  }
+  return window.matchMedia('(prefers-color-scheme: dark)').matches
+    ? 'dark'
+    : 'light'
+}
 
 export function ThemeToggle() {
   const [clickCount, setClickCount] = useState(0)
   const [countdownVisible, setCountdownVisible] = useState(false)
   const waveActive = clickCount >= 6
-  const [preference, setPreference] = useState<Theme | null>(() => {
-    try {
-      const saved = localStorage.getItem('portfolio-theme')
-      return saved === 'light' || saved === 'dark' ? saved : null
-    } catch {
-      return null
-    }
-  })
-  const [systemDark, setSystemDark] = useState(
-    () => window.matchMedia('(prefers-color-scheme: dark)').matches,
+  const [preference, setPreference] = useState<Theme | null>(null)
+  const storedTheme = useSyncExternalStore<Theme | null>(
+    subscribeToTheme,
+    readTheme,
+    () => null,
   )
-  const theme = preference ?? (systemDark ? 'dark' : 'light')
+  const resolvedTheme = preference ?? storedTheme
+  const theme = resolvedTheme ?? 'light'
 
   useEffect(() => {
     if (clickCount === 0) return
@@ -37,25 +51,18 @@ export function ThemeToggle() {
   }, [clickCount, waveActive])
 
   useEffect(() => {
-    const media = window.matchMedia('(prefers-color-scheme: dark)')
-    const updateSystemTheme = (event: MediaQueryListEvent) => {
-      setSystemDark(event.matches)
-    }
-    media.addEventListener('change', updateSystemTheme)
-    return () => media.removeEventListener('change', updateSystemTheme)
-  }, [])
-
-  useEffect(() => {
-    document.documentElement.dataset.theme = theme
+    // Preserve the head script's theme until browser preferences are available.
+    if (resolvedTheme === null) return
+    document.documentElement.dataset.theme = resolvedTheme
     document
       .querySelector('meta[name="theme-color"]')
       ?.setAttribute(
         'content',
         document.documentElement.style.getPropertyValue(
-          `--${theme}-background`,
-        ) || (theme === 'dark' ? '#23211E' : '#FAF6EC'),
+          `--${resolvedTheme}-background`,
+        ) || (resolvedTheme === 'dark' ? '#23211E' : '#FAF6EC'),
       )
-  }, [theme])
+  }, [resolvedTheme])
 
   function toggleTheme() {
     setCountdownVisible(!waveActive)

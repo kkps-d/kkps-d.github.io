@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useRef } from 'react'
 import { Introduction } from '../components/resume/Introduction'
 import { SectionNavigation } from '../components/resume/SectionNavigation'
 import { WorkExperience } from '../components/resume/WorkExperience'
@@ -8,40 +8,8 @@ import { Footer } from '../components/resume/Footer'
 import type { Resume } from '../types/resume'
 import styles from './Home.module.css'
 
-export function Home() {
-  const [resume, setResume] = useState<Resume | null>(null)
-  const [error, setError] = useState(false)
+export function Home({ resume }: { resume: Resume }) {
   const mainRef = useRef<HTMLElement>(null)
-
-  useEffect(() => {
-    const controller = new AbortController()
-    async function loadResume() {
-      try {
-        const response = await fetch('/resume.json', {
-          signal: controller.signal,
-        })
-        if (!response.ok) throw new Error('Could not load resume')
-        setResume(await response.json())
-      } catch {
-        if (!controller.signal.aborted) setError(true)
-      }
-    }
-    void loadResume()
-    return () => controller.abort()
-  }, [])
-
-  if (error)
-    return (
-      <p className={styles.loadStatus} role="alert">
-        The CV could not be loaded. Please reload the page.
-      </p>
-    )
-  if (!resume)
-    return (
-      <p className={styles.loadStatus} role="status">
-        Loading CV…
-      </p>
-    )
 
   return (
     <>

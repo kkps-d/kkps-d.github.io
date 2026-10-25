@@ -9,7 +9,10 @@ are served locally as WOFF2 variable fonts.
 ## Content
 
 `public/resume.json` is the single content source and is served at `/resume.json`.
-The page loads it directly. Its TypeScript contract is in `src/types/resume.ts`.
+The app imports it through the `virtual:resume` Vite module for both prerendering
+and browser hydration, while the public JSON URL remains available.
+Its TypeScript contract is in `src/types/resume.ts`. Content changes require a
+new build and deployment; development updates are handled by Vite.
 
 - `person`: name, role, location, relocation, contacts, summary, and CV download.
 - `experience`: stable IDs, dates, current status, short rewritten summaries grounded in the CV, and full CV bullets.
@@ -39,10 +42,15 @@ The custom domain and redirects also need to be configured in GitHub Pages
 settings and DNS. Update the title and descriptions in `index.html` when the
 profile changes.
 
-`Home.tsx` generates `ProfilePage` / `Person` JSON-LD from the loaded resume,
+`Home.tsx` generates `ProfilePage` / `Person` JSON-LD from the resume,
 including the name, role, summary, education, and GitHub and LinkedIn profiles.
 The introduction uses a single H1 containing the name and role, and projects
 display their technologies as text.
+
+The production HTML contains the complete CV and JSON-LD before JavaScript
+runs. React hydrates that HTML to enable the interactive controls. The existing
+head script applies the visitor's theme before paint; the theme toggle reads
+browser preferences after hydration without changing the initial markup.
 
 Fonts and screenshots are optimized once and checked in. WOFF2 retains all
 font glyphs, styles, and variable axes. No asset conversion runs during the
@@ -62,9 +70,18 @@ npm run build
 npm run preview
 ```
 
-`npm run build` checks TypeScript before bundling. Run `npm run typecheck` to check types without building. App source lives in `src/App.tsx`, with the entry point in `src/main.tsx`.
+`npm run build` checks TypeScript, bundles the browser app, and runs
+`scripts/prerender.mjs`. The script builds the Node renderer from
+`src/entry-server.tsx` into the ignored `node_modules/.cache/prerender/` directory,
+then renders the app into `dist/index.html` using the same content and CSS modules
+as the client. Only `dist/` is deployed; no server is needed on GitHub Pages.
+The existing Pages workflow runs this build automatically.
 
-`src/pages/Home.tsx` loads the content and composes the introduction, sticky
+Run `npm run typecheck` to check types without building. App source lives in
+`src/App.tsx`, with the browser entry point in `src/main.tsx`. Development uses
+client rendering; production hydrates the prerendered HTML.
+
+`src/pages/Home.tsx` receives the content and composes the introduction, sticky
 navigation, work experience, projects, education, and footer components in
 `src/components/resume/`. Section dividers and expandable descriptions share
 small components. Component styles live in colocated CSS modules; `src/index.css`
@@ -91,6 +108,7 @@ they are not preloaded. Bierstadt uses the visitor's installed font or a fallbac
 
 ```sh
 npm run lint
+npm test
 npm run lint:fix
 npm run format
 npm run format:check
@@ -99,6 +117,10 @@ npm run format:check
 ESLint uses the recommended JavaScript, TypeScript, React Hooks, and Vite Fast Refresh rules. Prettier handles formatting with two spaces, single quotes, no semicolons, and LF line endings. `eslint-config-prettier` disables conflicting lint rules. Both tools skip `old/`, `dist/`, and coverage output.
 
 TypeScript 6 is used for compatibility with the TypeScript ESLint parser.
+
+Run `npm run build` before `npm test`. The prerender tests check that the initial
+HTML includes all CV content and profile markup and that its CSS module classes
+match the browser stylesheet.
 
 ## Previous site
 

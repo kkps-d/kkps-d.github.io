@@ -50,7 +50,7 @@ export function SectionNavigation({
     observer.observe(contentRef.current)
     window.addEventListener('scroll', scheduleUpdate, { passive: true })
     window.addEventListener('resize', scheduleUpdate)
-    // The JSON loads after the browser first attempts to resolve a deep link.
+    // Resolve deep links after hydration or the development client render.
     const target = document.getElementById(window.location.hash.slice(1))
     target?.scrollIntoView({ behavior: 'instant' })
     updateSection()
